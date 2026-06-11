@@ -47,6 +47,10 @@ export function Navbar({ locale, dict }: { locale: Locale; dict: Dictionary }) {
 
   const navLabel = (key: string) => (dict.nav as Record<string, string>)[key] ?? key
 
+  // Over the dark hero the bar is transparent → use light text; once scrolled onto
+  // the white background → use dark text.
+  const onLight = scrolled
+
   return (
     <header
       className={cn(
@@ -62,16 +66,14 @@ export function Navbar({ locale, dict }: { locale: Locale; dict: Dictionary }) {
           className="flex items-center"
           aria-label="Soleva"
         >
-          <span className="flex items-center rounded-xl bg-[#0a0a0a] px-3 py-1.5">
-            <Image
-              src="/images/soleva-logo.webp"
-              alt="Soleva — The Solar Electric Van"
-              width={651}
-              height={281}
-              priority
-              className="h-8 w-auto md:h-9"
-            />
-          </span>
+          <Image
+            src="/images/soleva-logo.webp"
+            alt="Soleva — The Solar Electric Van"
+            width={651}
+            height={281}
+            priority
+            className="h-11 w-auto md:h-14"
+          />
         </Link>
 
         {/* Desktop nav */}
@@ -81,8 +83,12 @@ export function Navbar({ locale, dict }: { locale: Locale; dict: Dictionary }) {
               <Link
                 href={withLocale(locale, item.href)}
                 className={cn(
-                  "rounded-md px-3 py-2 text-sm font-medium transition-colors hover:text-primary",
-                  isActive(item.href) ? "text-primary" : "text-foreground/80",
+                  "rounded-md px-3 py-2 text-sm font-medium transition-colors",
+                  isActive(item.href)
+                    ? "text-primary"
+                    : onLight
+                      ? "text-foreground/80 hover:text-primary"
+                      : "text-white/85 hover:text-white",
                 )}
               >
                 {navLabel(item.key)}
@@ -96,7 +102,17 @@ export function Navbar({ locale, dict }: { locale: Locale; dict: Dictionary }) {
           <DropdownMenu>
             <DropdownMenuTrigger
               render={
-                <Button variant="ghost" size="sm" className="gap-1 px-2" aria-label={dict.nav.language} />
+                <Button
+                  variant="ghost"
+                  size="sm"
+                  className={cn(
+                    "gap-1 px-2",
+                    onLight
+                      ? "text-foreground hover:text-primary"
+                      : "text-white hover:bg-white/10 hover:text-white",
+                  )}
+                  aria-label={dict.nav.language}
+                />
               }
             >
               {localeShort[locale]}
@@ -131,7 +147,15 @@ export function Navbar({ locale, dict }: { locale: Locale; dict: Dictionary }) {
           <Sheet open={open} onOpenChange={setOpen}>
             <SheetTrigger
               render={
-                <Button variant="ghost" size="icon" className="lg:hidden" aria-label={dict.nav.menu} />
+                <Button
+                  variant="ghost"
+                  size="icon"
+                  className={cn(
+                    "lg:hidden",
+                    onLight ? "text-foreground" : "text-white hover:bg-white/10 hover:text-white",
+                  )}
+                  aria-label={dict.nav.menu}
+                />
               }
             >
               <Menu className="h-6 w-6" aria-hidden="true" />
