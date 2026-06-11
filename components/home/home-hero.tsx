@@ -15,6 +15,7 @@ export function HomeHero({ locale, dict }: { locale: Locale; dict: Dictionary })
           muted
           loop
           playsInline
+          preload="none"
           poster={IMAGES.hero}
           className="h-full w-full object-cover"
         >

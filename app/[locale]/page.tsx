@@ -11,7 +11,7 @@ import { Reveal } from "@/components/ui/reveal"
 import { Button } from "@/components/ui/button"
 import { CtaBand } from "@/components/ui/cta-band"
 import { withLocale } from "@/lib/navigation"
-import { PARTNER_LOGOS } from "@/lib/constants"
+import { PARTNER_LOGOS, IMAGES } from "@/lib/constants"
 import { partnerCategories } from "@/lib/data/partners"
 import { Camera, Aperture } from "lucide-react"
 
@@ -39,7 +39,7 @@ export default async function HomePage({
             <Reveal>
               <div className="relative aspect-[4/3] overflow-hidden rounded-3xl">
                 <Image
-                  src="/images/workshop.png"
+                  src={IMAGES.workshop}
                   alt=""
                   fill
                   sizes="(max-width: 1024px) 100vw, 50vw"
@@ -148,6 +148,7 @@ export default async function HomePage({
                 className="h-full w-full"
                 src="https://www.youtube.com/embed/6ScnYhFPv5w"
                 title="Soleva — L'aventure Soleva"
+                loading="lazy"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
               />

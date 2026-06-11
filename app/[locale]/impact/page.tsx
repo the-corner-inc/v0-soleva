@@ -3,7 +3,7 @@ import Image from "next/image"
 import { isLocale, type Locale } from "@/lib/i18n/config"
 import { getDictionary } from "@/lib/i18n"
 import { notFound } from "next/navigation"
-import { SITE_URL } from "@/lib/constants"
+import { SITE_URL, IMAGES } from "@/lib/constants"
 import { PageHero } from "@/components/layout/page-hero"
 import { SectionHeading } from "@/components/ui/section-heading"
 import { Reveal } from "@/components/ui/reveal"
@@ -52,7 +52,7 @@ export default async function ImpactPage({
         eyebrow={t.hero.eyebrow}
         title={t.hero.title}
         subtitle={t.hero.subtitle}
-        image="/images/impact.png"
+        image={IMAGES.impact}
       />
 
       <section className="bg-background">
@@ -82,7 +82,7 @@ export default async function ImpactPage({
 
       <section className="relative isolate overflow-hidden bg-dark text-dark-foreground">
         <div className="absolute inset-0 -z-10">
-          <Image src="/images/journey.png" alt="" fill sizes="100vw" className="object-cover opacity-25" />
+          <Image src={IMAGES.journey} alt="" fill sizes="100vw" className="object-cover opacity-25" />
           <div className="absolute inset-0 bg-dark/80" />
         </div>
         <div className="container-premium section-padding">

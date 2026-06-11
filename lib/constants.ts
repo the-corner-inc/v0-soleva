@@ -53,18 +53,18 @@ export const SITE = {
 const CDN = "https://d1oh1gq3c6bbc1.cloudfront.net/public/media"
 
 export const IMAGES = {
-  hero: "/images/soleva-hero.png", // fallback si pas de vidéo
+  hero: `${CDN}/924d6de5ce617b442f6c2f63d19b7989050b3d90da4962331d06a231ed114aac-253515.webp`, // poster fallback
   heroVideo: `${CDN}/c36b888c8ee4a4d1721678ae2c456e77261fb0d8401fc6bc71defaf40f97359f-210817.mp4`,
   vanExterior: `${CDN}/0c25eb235de11ea7ea6882a92a1be45af9792b5b06364fef9f67bd3ce479abdc-253506.webp`,
-  vanInterior: "/images/van-interior.png",
-  solarPanels: "/images/solar-panels.png",
-  conversion: "/images/electric-conversion.png",
-  habitat: "/images/habitat.png",
+  vanInterior: `${CDN}/cf70c433d0b51b1e80e9106c0079c147aa33bcdbc4b57e2adc1a45b7e6a53661-253537.webp`,
+  solarPanels: `${CDN}/b3b39fd6338afdf093d627f0bda0414de11bc57547733870aa031a6f55c4a5d3-253538.webp`,
+  conversion: `${CDN}/0c25eb235de11ea7ea6882a92a1be45af9792b5b06364fef9f67bd3ce479abdc-253506.webp`,
+  habitat: `${CDN}/bc751116783ee39eaa53d9cf322d39d9aa4b83d2dcea8846b58d214ddd987f7d-253525.webp`,
   team: `${CDN}/a9b7ac5c4c9475c0a2ce9777901af80b920edd004c0233860556949860063a10-253524.webp`,
   workshop: `${CDN}/e1b7ba6455ef46728af5ef2edc5e77708387b64b6341d4ecdb9f85fafe1cc5c5-253532.webp`,
-  journey: "/images/journey.png",
-  impact: "/images/impact.png",
-  support: "/images/support.png",
+  journey: `${CDN}/9e0680890378ac823246e9b28d3644ec219d580eddda979567bd90f49a8c3ca9-253536.webp`,
+  impact: `${CDN}/03a80fd974e2aa6bd1bfc68210fca8e79d1c035f080822256bbd81941b1c311a-105379.webp`,
+  support: `${CDN}/e1b7ba6455ef46728af5ef2edc5e77708387b64b6341d4ecdb9f85fafe1cc5c5-253532.webp`,
   newVanDesign: `${CDN}/976854c1e2dffa9c530172771425f9e6c552a00d1d2304631b86fb8254f12553-253513.webp`,
 } as const
 

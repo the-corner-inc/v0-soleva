@@ -3,7 +3,7 @@ import Link from "next/link"
 import { isLocale, type Locale } from "@/lib/i18n/config"
 import { getDictionary } from "@/lib/i18n"
 import { notFound } from "next/navigation"
-import { SITE_URL, KEY_FIGURES, DONATION } from "@/lib/constants"
+import { SITE_URL, KEY_FIGURES, DONATION, IMAGES } from "@/lib/constants"
 import { sponsorTiers } from "@/lib/data/sponsor-tiers"
 import { withLocale } from "@/lib/navigation"
 import { PageHero } from "@/components/layout/page-hero"
@@ -59,7 +59,7 @@ export default async function SupportPage({
         eyebrow={t.hero.eyebrow}
         title={t.hero.title}
         subtitle={t.hero.subtitle}
-        image="/images/support.png"
+        image={IMAGES.support}
       />
 
       <section className="bg-background">

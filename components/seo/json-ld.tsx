@@ -9,7 +9,7 @@ export function OrganizationJsonLd({ locale }: { locale: Locale }) {
     "@type": "NGO",
     name: SITE_NAME,
     url: `${SITE_URL}/${locale}`,
-    logo: `${SITE_URL}/images/soleva-logo.png`,
+    logo: `${SITE_URL}/images/soleva-logo.webp`,
     description: dict.meta.home.description,
     email: CONTACT.email,
     address: {

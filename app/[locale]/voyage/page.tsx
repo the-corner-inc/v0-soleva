@@ -4,7 +4,7 @@ import Link from "next/link"
 import { isLocale, type Locale } from "@/lib/i18n/config"
 import { getDictionary } from "@/lib/i18n"
 import { notFound } from "next/navigation"
-import { SITE_URL, KEY_FIGURES } from "@/lib/constants"
+import { SITE_URL, KEY_FIGURES, IMAGES } from "@/lib/constants"
 import { pastEvents, POLAR_STEPS_URL } from "@/lib/data/events"
 import { withLocale } from "@/lib/navigation"
 import { PageHero } from "@/components/layout/page-hero"
@@ -52,7 +52,7 @@ export default async function VoyagePage({
         eyebrow={t.hero.eyebrow}
         title={t.hero.title}
         subtitle={t.hero.subtitle}
-        image="/images/journey.png"
+        image={IMAGES.journey}
       />
 
       <section className="bg-background">
@@ -61,7 +61,7 @@ export default async function VoyagePage({
             <Reveal>
               <div className="relative aspect-[4/3] overflow-hidden rounded-3xl">
                 <Image
-                  src="/images/soleva-hero.png"
+                  src={IMAGES.hero}
                   alt=""
                   fill
                   sizes="(max-width: 1024px) 100vw, 50vw"
