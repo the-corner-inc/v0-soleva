@@ -116,6 +116,23 @@
       "title": "Soleva in den Medien",
       "subtitle": "Berichterstattung in der Westschweiz und national."
     },
+    "new_start": {
+      "title": "Neuanfang",
+      "body": "Trotz des Brandes, der die Werkstatt verwüstete und Sunny, den ersten Solar-Van, zerstörte, geht das Soleva-Abenteuer weiter. Die Sicherheitssysteme des Vans funktionierten einwandfrei und bewiesen die Zuverlässigkeit des Konzepts. Nachdem das Team tausende Menschen während der Schweiz-Tour inspiriert hat, weigert es sich, diesen Traum sterben zu lassen. Ein neuer Solar-Van ist in Vorbereitung, getragen von der Leidenschaft des Teams und der Unterstützung der Gemeinschaft.",
+      "subtitle": "Unterstützen Sie den neuen Van",
+      "cta": "Das Projekt unterstützen"
+    },
+    "partners": {
+      "title": "Unsere Partner",
+      "subtitle": "Technische, institutionelle und akademische Partner, die das Projekt ermöglichen.",
+      "technical": "Technische Partner",
+      "institutional": "Institutionelle Unterstützung",
+      "awards": "Auszeichnungen"
+    },
+    "documentary": {
+      "title": "L'aventure Soleva — der Dokumentarfilm",
+      "subtitle": "Premiere am 4. Oktober 2024 an der Esplanade de Montbenon, Lausanne"
+    },
     "cta": {
       "title": "Möchten Sie mehr über Soleva erfahren?",
       "body": "Eine Frage, eine Event-Einladung oder der Wunsch, das Projekt zu unterstützen? Schreiben Sie uns.",
@@ -168,7 +185,11 @@
     "invite_title": "Soleva zu Ihrer Veranstaltung einladen",
     "invite_body": "Festival, Messe, Schule, Unternehmen oder Gemeinde: Soleva kann den Van und sein Projekt vorstellen. Kontaktieren Sie uns, um die Möglichkeiten gemeinsam zu prüfen.",
     "invite_cta": "Soleva einladen",
-    "stops_title": "Einige Stationen"
+    "stops_title": "Einige Stationen",
+    "events_title": "Vergangene Veranstaltungen",
+    "events_cta": "Haben Sie eine Veranstaltung im Sinn? Laden Sie Soleva ein!",
+    "polar_title": "Verfolgen Sie die Reise live",
+    "polar_body": "Verfolgen Sie die Soleva-Tour in Echtzeit über Polar Steps."
   },
   "support": {
     "hero": {
@@ -198,6 +219,17 @@
       "backers": "Unterstützer",
       "link": "Kampagne ansehen",
       "todo": "Spendenlink und steuerliche Absetzbarkeit mit Soleva zu bestätigen."
+    },
+    "iban": {
+      "title": "Spenden",
+      "body": "Spenden bleiben unerlässlich, um die Entwicklung des neuen Solar-Vans zu finanzieren.",
+      "account_holder": "Kontoinhaber",
+      "address": "Adresse",
+      "iban_label": "IBAN",
+      "bic_label": "BIC/SWIFT",
+      "bank_label": "Bank",
+      "description_label": "Verwendungszweck",
+      "description_value": "Spende an das Soleva-Projekt"
     }
   },
   "about": {
@@ -215,7 +247,11 @@
     "timeline_title": "Wichtige Meilensteine",
     "team_title": "Das Team",
     "team_subtitle": "Ein Team von Ingenieuren und Begeisterten, unterstützt von Dutzenden Freiwilligen.",
-    "team_todo": "Teamliste von Soleva zu validieren."
+    "members_title": "Mitglieder",
+    "members_subtitle": "Ein Team von Ingenieuren und Enthusiasten, unterstützt von Dutzenden Freiwilligen.",
+    "mentors_title": "Mentoren und externe Berater",
+    "press_title": "Soleva in den Medien",
+    "press_subtitle": "Nationale Medienberichterstattung in der Schweiz und darüber hinaus."
   },
   "contact": {
     "hero": {
@@ -278,14 +314,14 @@
   "legal": {
     "title": "Impressum",
     "editor_title": "Herausgeber der Website",
-    "editor_body": "Verein Soleva, Lausanne, Schweiz. E-Mail: info@soleva.org.",
+    "editor_body": "ASSOCIATION SOLEVA, Rue de Lausanne 64, 1020 Renens VD, Schweiz. E-Mail: info@soleva.org. Telefon: +41 77 420 74 40.",
     "form_title": "Rechtsform",
-    "form_body": "Verein (zu bestätigen).",
+    "form_body": "Verein.",
     "hosting_title": "Hosting",
-    "hosting_body": "Vercel Inc., San Francisco, CA, USA.",
+    "hosting_body": "The Corner Factory SA — VPS Server Infomaniak, Schweiz.",
     "credits_title": "Konzeption und Entwicklung",
     "credits_body": "The Corner Factories.",
-    "todo": "Vollständiger rechtlicher Name, Adresse und UID-Nummer vom Kunden zu bestätigen."
+    "todo": "UID-Nummer vom Kunden zu bestätigen."
   },
   "privacy": {
     "title": "Datenschutzerklärung",
@@ -322,7 +358,10 @@
     "legal_links": "Informationen",
     "rights": "Alle Rechte vorbehalten.",
     "produced_by": "Produziert von The Corner Factories",
-    "manage_cookies": "Cookies verwalten"
+    "manage_cookies": "Cookies verwalten",
+    "newsletter_title": "Newsletter",
+    "newsletter_placeholder": "Ihre E-Mail",
+    "newsletter_button": "Anmelden"
   },
   "cookies": {
     "message": "Wir verwenden Cookies zur Reichweitenmessung. Sie können zustimmen oder ablehnen. Ohne Ihre Zustimmung werden keine Daten erhoben.",

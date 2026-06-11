@@ -10,8 +10,17 @@ export function OrganizationJsonLd({ locale }: { locale: Locale }) {
     name: SITE_NAME,
     url: `${SITE_URL}/${locale}`,
     logo: `${SITE_URL}/images/soleva-logo.png`,
-    description: dict.meta.homeDescription,
+    description: dict.meta.home.description,
     email: CONTACT.email,
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: CONTACT.address.street,
+      postalCode: CONTACT.address.zip,
+      addressLocality: CONTACT.address.city,
+      addressRegion: CONTACT.address.canton,
+      addressCountry: "CH",
+    },
+    telephone: CONTACT.phone,
     foundingLocation: {
       "@type": "Place",
       address: {

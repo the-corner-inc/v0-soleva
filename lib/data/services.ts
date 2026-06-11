@@ -175,13 +175,14 @@ export const services: Service[] = [
         shortDescription:
           "Une toiture photovoltaïque déployable pour produire l'énergie du voyage directement grâce au soleil.",
         fullDescription:
-          "Le cœur technologique de Soleva est son système photovoltaïque innovant. Développés par le CSEM en collaboration avec le PV-Lab de l'EPFL, les panneaux solaires légers et déployables permettent de produire l'énergie nécessaire au déplacement et à la vie à bord.",
+          "Le cœur technologique de Soleva est son système photovoltaïque innovant. Développés par le CSEM en collaboration avec le PV-Lab de l'EPFL, les panneaux solaires légers et déployables permettent de produire l'énergie nécessaire au déplacement et à la vie à bord. Grâce à la technologie V2X (Vehicle-to-Everything), le van devient une centrale solaire mobile capable d'alimenter des événements, festivals et services publics.",
         features: [
           "Panneaux solaires haute performance développés par le CSEM et l'EPFL PV-Lab",
           "1 350 W de puissance solaire embarquée",
           "Structure légère, renforcée, résistante à la grêle",
           "Système déployable pour maximiser la surface de captation",
           "Recharge jusqu'à 150 km d'autonomie par jour de soleil",
+          "Technologie V2X : alimentation externe d'événements et de services",
           "Convertisseur DC-DC BRUSA HyPower optimisant le flux panneaux → batterie",
         ],
         process: [
@@ -202,13 +203,14 @@ export const services: Service[] = [
         shortDescription:
           "A deployable photovoltaic roof to produce the energy of the journey directly from the sun.",
         fullDescription:
-          "The technological heart of Soleva is its innovative photovoltaic system. Developed by CSEM in collaboration with the EPFL PV-Lab, the lightweight, deployable solar panels produce the energy needed for driving and life on board.",
+          "The technological heart of Soleva is its innovative photovoltaic system. Developed by CSEM in collaboration with the EPFL PV-Lab, the lightweight, deployable solar panels produce the energy needed for driving and life on board. Thanks to V2X (Vehicle-to-Everything) technology, the van becomes a mobile solar power station capable of powering events, festivals and public services.",
         features: [
           "High-performance solar panels developed by CSEM and the EPFL PV-Lab",
           "1,350 W of on-board solar power",
           "Lightweight, reinforced, hail-resistant structure",
           "Deployable system to maximize the capture surface",
           "Recharges up to 150 km of range per sunny day",
+          "V2X technology: external power for events and services",
           "BRUSA HyPower DC-DC converter optimizing the panels → battery flow",
         ],
         process: [
@@ -229,13 +231,14 @@ export const services: Service[] = [
         shortDescription:
           "Ein ausfahrbares Photovoltaikdach, um die Energie der Reise direkt aus der Sonne zu erzeugen.",
         fullDescription:
-          "Das technologische Herz von Soleva ist sein innovatives Photovoltaiksystem. Entwickelt vom CSEM in Zusammenarbeit mit dem EPFL PV-Lab, erzeugen die leichten, ausfahrbaren Solarmodule die Energie für Fahrt und Leben an Bord.",
+          "Das technologische Herz von Soleva ist sein innovatives Photovoltaiksystem. Entwickelt vom CSEM in Zusammenarbeit mit dem EPFL PV-Lab, erzeugen die leichten, ausfahrbaren Solarmodule die Energie für Fahrt und Leben an Bord. Dank V2X-Technologie (Vehicle-to-Everything) wird der Van zu einem mobilen Solarkraftwerk, das Veranstaltungen, Festivals und öffentliche Dienste mit Strom versorgen kann.",
         features: [
           "Hochleistungs-Solarmodule, entwickelt vom CSEM und dem EPFL PV-Lab",
           "1'350 W Solarleistung an Bord",
           "Leichte, verstärkte, hagelresistente Struktur",
           "Ausfahrbares System zur Maximierung der Auffangfläche",
           "Lädt bis zu 150 km Reichweite pro Sonnentag",
+          "V2X-Technologie: externe Stromversorgung für Events und Dienste",
           "BRUSA HyPower DC-DC-Konverter zur Optimierung des Flusses Module → Batterie",
         ],
         process: [
@@ -256,13 +259,14 @@ export const services: Service[] = [
         shortDescription:
           "Un tetto fotovoltaico estensibile per produrre l'energia del viaggio direttamente dal sole.",
         fullDescription:
-          "Il cuore tecnologico di Soleva è il suo sistema fotovoltaico innovativo. Sviluppati dal CSEM in collaborazione con il PV-Lab dell'EPFL, i pannelli solari leggeri ed estensibili producono l'energia necessaria per la guida e la vita a bordo.",
+          "Il cuore tecnologico di Soleva è il suo sistema fotovoltaico innovativo. Sviluppati dal CSEM in collaborazione con il PV-Lab dell'EPFL, i pannelli solari leggeri ed estensibili producono l'energia necessaria per la guida e la vita a bordo. Grazie alla tecnologia V2X (Vehicle-to-Everything), il van diventa una centrale solare mobile in grado di alimentare eventi, festival e servizi pubblici.",
         features: [
           "Pannelli solari ad alte prestazioni sviluppati dal CSEM e dal PV-Lab dell'EPFL",
           "1'350 W di potenza solare a bordo",
           "Struttura leggera, rinforzata, resistente alla grandine",
           "Sistema estensibile per massimizzare la superficie di captazione",
           "Ricarica fino a 150 km di autonomia per giornata di sole",
+          "Tecnologia V2X: alimentazione esterna per eventi e servizi",
           "Convertitore DC-DC BRUSA HyPower che ottimizza il flusso pannelli → batteria",
         ],
         process: [
@@ -297,14 +301,16 @@ export const services: Service[] = [
         shortDescription:
           "Un espace de vie confortable, sobre et pensé pour réduire l'impact du voyage.",
         fullDescription:
-          "Soleva est aussi une petite maison sur roues. L'aménagement intérieur a été conçu pour offrir confort, sobriété et autonomie, en utilisant des matériaux recyclés, locaux et durables autant que possible.",
+          "Soleva est aussi une petite maison sur roues. L'aménagement intérieur a été conçu pour offrir confort, sobriété et autonomie, en utilisant des matériaux recyclés, locaux et durables. Chaque détail répond à une philosophie Low-Tech : des solutions intelligentes à faible impact environnemental.",
         features: [
           "Chambre avec couchages pour l'équipe",
           "Cuisine équipée",
-          "Salle de bain",
-          "Espace de vie et de travail",
-          "Matériaux recyclés, locaux et durables",
-          "Conception bas carbone intégrée",
+          "Salle de bain avec douche perpétuelle (réduction de la consommation d'eau)",
+          "Toilettes sèches",
+          "Poêle à masse inertielle pour le chauffage",
+          "Isolation en liège et laine recyclés",
+          "Meubles en bois de récupération",
+          "Conception Low-Tech : solutions intelligentes à faible impact",
         ],
         process: [
           { step: 1, title: "Design", description: "Conception de l'aménagement intérieur en optimisant l'espace, le confort et la sobriété énergétique." },
@@ -324,14 +330,16 @@ export const services: Service[] = [
         shortDescription:
           "A comfortable, sober living space designed to reduce the impact of travel.",
         fullDescription:
-          "Soleva is also a small house on wheels. The interior layout was designed to offer comfort, sobriety and autonomy, using recycled, local and durable materials as much as possible.",
+          "Soleva is also a small house on wheels. The interior layout was designed to offer comfort, sobriety and autonomy, using recycled, local and durable materials. Every detail follows a Low-Tech philosophy: smart solutions with low environmental impact.",
         features: [
           "Bedroom with sleeping space for the team",
           "Equipped kitchen",
-          "Bathroom",
-          "Living and working space",
-          "Recycled, local and durable materials",
-          "Integrated low-carbon design",
+          "Bathroom with perpetual shower (reducing water consumption)",
+          "Dry toilets",
+          "Inertial mass stove for heating",
+          "Cork and recycled wool insulation",
+          "Reclaimed wood furniture",
+          "Low-Tech design: smart, low-impact solutions",
         ],
         process: [
           { step: 1, title: "Design", description: "Designing the interior layout by optimizing space, comfort and energy sobriety." },
@@ -351,14 +359,16 @@ export const services: Service[] = [
         shortDescription:
           "Ein komfortabler, schlichter Wohnraum, gedacht, um die Auswirkungen des Reisens zu verringern.",
         fullDescription:
-          "Soleva ist auch ein kleines Haus auf Rädern. Der Innenausbau wurde so gestaltet, dass er Komfort, Schlichtheit und Autonomie bietet, indem so weit wie möglich recycelte, lokale und nachhaltige Materialien verwendet werden.",
+          "Soleva ist auch ein kleines Haus auf Rädern. Der Innenausbau wurde so gestaltet, dass er Komfort, Schlichtheit und Autonomie bietet, indem recycelte, lokale und nachhaltige Materialien verwendet werden. Jedes Detail folgt einer Low-Tech-Philosophie: intelligente Lösungen mit geringer Umweltbelastung.",
         features: [
           "Schlafraum mit Schlafplätzen für das Team",
           "Ausgestattete Küche",
-          "Badezimmer",
-          "Wohn- und Arbeitsbereich",
-          "Recycelte, lokale und nachhaltige Materialien",
-          "Integriertes CO₂-armes Design",
+          "Badezimmer mit immerwährender Dusche (reduzierter Wasserverbrauch)",
+          "Trockentoilette",
+          "Speicherofen für die Heizung",
+          "Isolierung aus Kork und recycelter Wolle",
+          "Möbel aus Altholz",
+          "Low-Tech-Design: intelligente Lösungen mit geringer Wirkung",
         ],
         process: [
           { step: 1, title: "Design", description: "Gestaltung des Innenausbaus durch Optimierung von Raum, Komfort und Energiesparsamkeit." },
@@ -378,14 +388,16 @@ export const services: Service[] = [
         shortDescription:
           "Uno spazio abitativo confortevole e sobrio, pensato per ridurre l'impatto del viaggio.",
         fullDescription:
-          "Soleva è anche una piccola casa su ruote. L'allestimento interno è stato progettato per offrire comfort, sobrietà e autonomia, utilizzando il più possibile materiali riciclati, locali e durevoli.",
+          "Soleva è anche una piccola casa su ruote. L'allestimento interno è stato progettato per offrire comfort, sobrietà e autonomia, utilizzando materiali riciclati, locali e durevoli. Ogni dettaglio segue una filosofia Low-Tech: soluzioni intelligenti a basso impatto ambientale.",
         features: [
           "Camera con posti letto per il team",
           "Cucina attrezzata",
-          "Bagno",
-          "Spazio di vita e di lavoro",
-          "Materiali riciclati, locali e durevoli",
-          "Progettazione a basse emissioni integrata",
+          "Bagno con doccia perpetua (riduzione del consumo d'acqua)",
+          "Toilette a secco",
+          "Stufa a massa inerziale per il riscaldamento",
+          "Isolamento in sughero e lana riciclati",
+          "Mobili in legno di recupero",
+          "Design Low-Tech: soluzioni intelligenti a basso impatto",
         ],
         process: [
           { step: 1, title: "Design", description: "Progettazione dell'allestimento interno ottimizzando spazio, comfort e sobrietà energetica." },

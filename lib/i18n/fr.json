@@ -116,6 +116,23 @@
       "title": "Ils parlent de Soleva",
       "subtitle": "Une couverture médiatique en Suisse romande et au niveau national."
     },
+    "new_start": {
+      "title": "Nouveau départ",
+      "body": "Malgré l'incendie qui a ravagé l'atelier et emporté Sunny, le premier van solaire, l'aventure Soleva continue. Les systèmes de sécurité du van ont parfaitement fonctionné, prouvant la fiabilité de la conception. Après avoir inspiré des milliers de personnes lors du tour de Suisse, l'équipe refuse de laisser ce rêve s'éteindre. Un nouveau van solaire est en préparation, porté par la passion de l'équipe et le soutien de la communauté.",
+      "subtitle": "Soutenez le nouveau van",
+      "cta": "Soutenir le projet"
+    },
+    "partners": {
+      "title": "Nos partenaires",
+      "subtitle": "Des partenaires techniques, institutionnels et académiques qui rendent le projet possible.",
+      "technical": "Partenaires techniques",
+      "institutional": "Soutiens institutionnels",
+      "awards": "Prix et reconnaissances"
+    },
+    "documentary": {
+      "title": "L'aventure Soleva — le documentaire",
+      "subtitle": "Première le 4 octobre 2024 à l'Esplanade de Montbenon, Lausanne"
+    },
     "cta": {
       "title": "Envie d'en savoir plus sur Soleva ?",
       "body": "Une question, une invitation à un événement ou une envie de soutenir le projet ? Écrivez-nous.",
@@ -168,7 +185,11 @@
     "invite_title": "Inviter Soleva à votre événement",
     "invite_body": "Festival, salon, école, entreprise ou collectivité : Soleva peut venir présenter le van et son projet. Contactez-nous pour étudier ensemble les possibilités.",
     "invite_cta": "Inviter Soleva",
-    "stops_title": "Quelques étapes"
+    "stops_title": "Quelques étapes",
+    "events_title": "Événements passés",
+    "events_cta": "Vous avez un événement en tête ? Invitez Soleva !",
+    "polar_title": "Suivez le voyage en direct",
+    "polar_body": "Retrouvez le suivi en temps réel du tour de Soleva via Polar Steps."
   },
   "support": {
     "hero": {
@@ -198,6 +219,17 @@
       "backers": "Contributeurs",
       "link": "Voir la campagne",
       "todo": "Lien de don et déductibilité fiscale à confirmer avec Soleva."
+    },
+    "iban": {
+      "title": "Faire un don",
+      "body": "Les donations restent essentielles pour financer le développement du nouveau van solaire.",
+      "account_holder": "Titulaire",
+      "address": "Adresse",
+      "iban_label": "IBAN",
+      "bic_label": "BIC/SWIFT",
+      "bank_label": "Banque",
+      "description_label": "Communication",
+      "description_value": "Donation au projet Soleva"
     }
   },
   "about": {
@@ -215,7 +247,11 @@
     "timeline_title": "Les grandes étapes",
     "team_title": "L'équipe",
     "team_subtitle": "Une équipe d'ingénieurs et de passionnés, soutenue par des dizaines de bénévoles.",
-    "team_todo": "Liste de l'équipe à valider par Soleva."
+    "members_title": "Membres",
+    "members_subtitle": "Une équipe d'ingénieurs et de passionnés, soutenue par des dizaines de bénévoles.",
+    "mentors_title": "Tuteurs et conseillers externes",
+    "press_title": "Soleva dans les médias",
+    "press_subtitle": "Une couverture médiatique nationale en Suisse et au-delà."
   },
   "contact": {
     "hero": {
@@ -278,14 +314,14 @@
   "legal": {
     "title": "Mentions légales",
     "editor_title": "Éditeur du site",
-    "editor_body": "Association Soleva, Lausanne, Suisse. Email : info@soleva.org.",
+    "editor_body": "ASSOCIATION SOLEVA, Rue de Lausanne 64, 1020 Renens VD, Suisse. Email : info@soleva.org. Téléphone : +41 77 420 74 40.",
     "form_title": "Forme juridique",
-    "form_body": "Association (à confirmer).",
+    "form_body": "Association.",
     "hosting_title": "Hébergement",
-    "hosting_body": "Vercel Inc., San Francisco, CA, États-Unis.",
+    "hosting_body": "The Corner Factory SA — Serveur VPS Infomaniak, Suisse.",
     "credits_title": "Conception et développement",
     "credits_body": "The Corner Factories.",
-    "todo": "Nom légal complet, adresse et numéro IDE à confirmer par le client."
+    "todo": "Numéro IDE à confirmer par le client."
   },
   "privacy": {
     "title": "Politique de confidentialité",
@@ -322,7 +358,10 @@
     "legal_links": "Informations",
     "rights": "Tous droits réservés.",
     "produced_by": "Produit par The Corner Factories",
-    "manage_cookies": "Gérer les cookies"
+    "manage_cookies": "Gérer les cookies",
+    "newsletter_title": "Newsletter",
+    "newsletter_placeholder": "Votre email",
+    "newsletter_button": "S'inscrire"
   },
   "cookies": {
     "message": "Nous utilisons des cookies pour mesurer l'audience du site. Vous pouvez accepter ou refuser. Aucune donnée n'est collectée sans votre consentement.",

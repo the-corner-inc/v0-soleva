@@ -9,6 +9,7 @@ import { PageHero } from "@/components/layout/page-hero"
 import { SectionHeading } from "@/components/ui/section-heading"
 import { Reveal } from "@/components/ui/reveal"
 import { Button } from "@/components/ui/button"
+import { CtaBand } from "@/components/ui/cta-band"
 import { Heart, Handshake, Users, Share2, ArrowRight } from "lucide-react"
 
 export async function generateMetadata({
@@ -118,6 +119,48 @@ export default async function SupportPage({
           <p className="mx-auto mt-8 max-w-2xl text-center text-sm italic text-dark-foreground/60">{cf.todo}</p>
         </div>
       </section>
+
+      {/* IBAN Donation */}
+      <section className="bg-background">
+        <div className="container-premium section-padding">
+          <div className="mx-auto max-w-2xl">
+            <Reveal>
+              <h2 className="font-heading text-center text-2xl font-bold sm:text-3xl">{t.iban.title}</h2>
+              <p className="mt-3 text-center leading-relaxed text-muted-foreground">{t.iban.body}</p>
+            </Reveal>
+            <div className="mt-8 rounded-3xl border border-border bg-card p-8">
+              <dl className="grid gap-4">
+                <div className="grid grid-cols-2 gap-2 rounded-xl bg-muted p-4">
+                  <dt className="text-sm font-semibold text-muted-foreground">{t.iban.account_holder}</dt>
+                  <dd className="text-sm text-foreground">ASSOCIATION SOLEVA</dd>
+                </div>
+                <div className="grid grid-cols-2 gap-2 rounded-xl bg-muted p-4">
+                  <dt className="text-sm font-semibold text-muted-foreground">{t.iban.address}</dt>
+                  <dd className="text-sm text-foreground">Rue de Lausanne 64, 1020 Renens VD</dd>
+                </div>
+                <div className="grid grid-cols-2 gap-2 rounded-xl bg-muted p-4">
+                  <dt className="text-sm font-semibold text-muted-foreground">{t.iban.iban_label}</dt>
+                  <dd className="font-mono text-sm text-foreground">CH36 0076 7000 L553 2228 7</dd>
+                </div>
+                <div className="grid grid-cols-2 gap-2 rounded-xl bg-muted p-4">
+                  <dt className="text-sm font-semibold text-muted-foreground">{t.iban.bic_label}</dt>
+                  <dd className="font-mono text-sm text-foreground">BCVLCH2LXXX</dd>
+                </div>
+                <div className="grid grid-cols-2 gap-2 rounded-xl bg-muted p-4">
+                  <dt className="text-sm font-semibold text-muted-foreground">{t.iban.bank_label}</dt>
+                  <dd className="text-sm text-foreground">Banque Cantonale Vaudoise</dd>
+                </div>
+                <div className="grid grid-cols-2 gap-2 rounded-xl bg-muted p-4">
+                  <dt className="text-sm font-semibold text-muted-foreground">{t.iban.description_label}</dt>
+                  <dd className="font-mono text-sm text-foreground">{t.iban.description_value}</dd>
+                </div>
+              </dl>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <CtaBand locale={l} title={dict.home.cta.title} body={dict.home.cta.body} buttonLabel={dict.common.contact_us} />
     </>
   )
 }

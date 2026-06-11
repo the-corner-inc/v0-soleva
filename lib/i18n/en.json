@@ -116,6 +116,23 @@
       "title": "Soleva in the media",
       "subtitle": "Coverage across French-speaking Switzerland and nationally."
     },
+    "new_start": {
+      "title": "A new beginning",
+      "body": "Despite the fire that ravaged the workshop and took Sunny, the first solar van, the Soleva adventure continues. The van's safety systems worked perfectly, proving the reliability of the design. After inspiring thousands of people during the Swiss tour, the team refuses to let this dream die. A new solar van is in preparation, driven by the team's passion and the community's support.",
+      "subtitle": "Support the new van",
+      "cta": "Support the project"
+    },
+    "partners": {
+      "title": "Our partners",
+      "subtitle": "Technical, institutional and academic partners making the project possible.",
+      "technical": "Technical partners",
+      "institutional": "Institutional support",
+      "awards": "Awards and recognition"
+    },
+    "documentary": {
+      "title": "L'aventure Soleva — the documentary",
+      "subtitle": "Premiere on October 4, 2024 at Esplanade de Montbenon, Lausanne"
+    },
     "cta": {
       "title": "Want to learn more about Soleva?",
       "body": "A question, an event invitation or a wish to support the project? Write to us.",
@@ -168,7 +185,11 @@
     "invite_title": "Invite Soleva to your event",
     "invite_body": "Festival, trade fair, school, company or municipality: Soleva can come and present the van and its project. Contact us to explore the possibilities together.",
     "invite_cta": "Invite Soleva",
-    "stops_title": "A few stops"
+    "stops_title": "A few stops",
+    "events_title": "Past events",
+    "events_cta": "Have an event in mind? Invite Soleva!",
+    "polar_title": "Follow the journey live",
+    "polar_body": "Track Soleva's tour in real time via Polar Steps."
   },
   "support": {
     "hero": {
@@ -198,6 +219,17 @@
       "backers": "Backers",
       "link": "View the campaign",
       "todo": "Donation link and tax deductibility to be confirmed with Soleva."
+    },
+    "iban": {
+      "title": "Make a donation",
+      "body": "Donations remain essential to fund the development of the new solar van.",
+      "account_holder": "Account holder",
+      "address": "Address",
+      "iban_label": "IBAN",
+      "bic_label": "BIC/SWIFT",
+      "bank_label": "Bank",
+      "description_label": "Reference",
+      "description_value": "Donation to the Soleva project"
     }
   },
   "about": {
@@ -215,7 +247,11 @@
     "timeline_title": "Key milestones",
     "team_title": "The team",
     "team_subtitle": "A team of engineers and enthusiasts, supported by dozens of volunteers.",
-    "team_todo": "Team list to be validated by Soleva."
+    "members_title": "Members",
+    "members_subtitle": "A team of engineers and enthusiasts, supported by dozens of volunteers.",
+    "mentors_title": "Mentors and external advisors",
+    "press_title": "Soleva in the media",
+    "press_subtitle": "National media coverage in Switzerland and beyond."
   },
   "contact": {
     "hero": {
@@ -278,14 +314,14 @@
   "legal": {
     "title": "Legal notice",
     "editor_title": "Site editor",
-    "editor_body": "Soleva association, Lausanne, Switzerland. Email: info@soleva.org.",
+    "editor_body": "ASSOCIATION SOLEVA, Rue de Lausanne 64, 1020 Renens VD, Switzerland. Email: info@soleva.org. Phone: +41 77 420 74 40.",
     "form_title": "Legal form",
-    "form_body": "Association (to be confirmed).",
+    "form_body": "Association.",
     "hosting_title": "Hosting",
-    "hosting_body": "Vercel Inc., San Francisco, CA, USA.",
+    "hosting_body": "The Corner Factory SA — VPS Server Infomaniak, Switzerland.",
     "credits_title": "Design and development",
     "credits_body": "The Corner Factories.",
-    "todo": "Full legal name, address and UID number to be confirmed by the client."
+    "todo": "UID number to be confirmed by the client."
   },
   "privacy": {
     "title": "Privacy policy",
@@ -322,7 +358,10 @@
     "legal_links": "Information",
     "rights": "All rights reserved.",
     "produced_by": "Produced by The Corner Factories",
-    "manage_cookies": "Manage cookies"
+    "manage_cookies": "Manage cookies",
+    "newsletter_title": "Newsletter",
+    "newsletter_placeholder": "Your email",
+    "newsletter_button": "Subscribe"
   },
   "cookies": {
     "message": "We use cookies to measure site audience. You can accept or decline. No data is collected without your consent.",

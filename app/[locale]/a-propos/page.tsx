@@ -132,16 +132,99 @@ export default async function AboutPage({
         </div>
       </section>
 
-      {/* Team */}
+      {/* Team Members */}
       <section className="bg-muted">
-        <div className="container-premium section-padding text-center">
+        <div className="container-premium section-padding">
           <Reveal>
-            <h2 className="font-heading text-2xl font-bold sm:text-3xl">{a.team_title}</h2>
-            <p className="mx-auto mt-3 max-w-2xl leading-relaxed text-muted-foreground">{a.team_subtitle}</p>
-            <p className="mx-auto mt-6 max-w-xl rounded-2xl border border-dashed border-border bg-card p-4 text-sm text-muted-foreground">
-              {a.team_todo}
-            </p>
+            <h2 className="font-heading text-center text-2xl font-bold sm:text-3xl">{a.team_title}</h2>
+            <p className="mx-auto mt-3 max-w-2xl text-center leading-relaxed text-muted-foreground">{a.members_subtitle}</p>
           </Reveal>
+          <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {[
+              { name: "Curdin Wüthrich", role: "CEO et co-fondateur", email: "curdin.wuethrich@soleva.org" },
+              { name: "Matthieu Bourgois", role: "CTO, co-fondateur, intégration mécanique", email: "matthieu.bourgois@soleva.org" },
+              { name: "Max Chevron", role: "Trésorier, gestion batteries", email: "max.chevron@soleva.org" },
+              { name: "Tobia Wyss", role: "Co-fondateur, intégration solaire", email: "tobia.wyss@soleva.org" },
+              { name: "Sara Bossuyt", role: "Co-fondatrice, communication et habitat", email: "sara.bossuyt@soleva.org" },
+              { name: "Sévane Bercher", role: "Co-fondatrice, juridique", email: "sevane.bercher@soleva.org" },
+              { name: "Lucanaël Kopf", role: "Chef de projet intégration mécanique" },
+              { name: "Roman Schmitz", role: "Chef de projet électrification", email: "roman.schmitz@soleva.org" },
+              { name: "Nicola Offeddu", role: "Construction habitat durable" },
+            ].map((member, i) => (
+              <Reveal key={member.name} delay={i * 0.04}>
+                <div className="flex flex-col rounded-2xl border border-border bg-card p-6 text-center">
+                  <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-secondary/15 text-lg font-bold text-secondary">
+                    {member.name.split(" ").map((n) => n[0]).join("").slice(0, 2)}
+                  </div>
+                  <h3 className="mt-4 font-heading text-lg font-semibold">{member.name}</h3>
+                  <p className="mt-1 text-sm leading-relaxed text-muted-foreground">{member.role}</p>
+                  {member.email && (
+                    <a href={`mailto:${member.email}`} className="mt-2 text-xs text-primary hover:underline">
+                      {member.email}
+                    </a>
+                  )}
+                </div>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Mentors */}
+      <section className="bg-background">
+        <div className="container-premium section-padding">
+          <Reveal>
+            <h2 className="font-heading text-center text-2xl font-bold sm:text-3xl">{a.mentors_title}</h2>
+          </Reveal>
+          <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            {[
+              { name: "Marc Müller", role: "Fondateur ICARE, Président Impact Living" },
+              { name: "André Hodder", role: "Enseignant-chercheur EPFL, moteurs électriques" },
+              { name: "Louis Palmer", role: "Fondateur SolarTaxi, SolarButterfly, WAVE" },
+              { name: "Prof. Dr. Werner Stednitz", role: "HTW Berlin, Advanced Automotive Concepts" },
+            ].map((mentor, i) => (
+              <Reveal key={mentor.name} delay={i * 0.06}>
+                <div className="flex flex-col rounded-2xl border border-border bg-card p-6 text-center">
+                  <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-primary/10 text-sm font-bold text-primary">
+                    {mentor.name.split(" ").map((n) => n[0]).join("").slice(0, 2)}
+                  </div>
+                  <h3 className="mt-3 font-heading text-base font-semibold">{mentor.name}</h3>
+                  <p className="mt-1 text-sm leading-relaxed text-muted-foreground">{mentor.role}</p>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Press */}
+      <section className="bg-muted">
+        <div className="container-premium section-padding">
+          <Reveal>
+            <h2 className="font-heading text-center text-2xl font-bold sm:text-3xl">{a.press_title}</h2>
+            <p className="mx-auto mt-3 max-w-2xl text-center leading-relaxed text-muted-foreground">{a.press_subtitle}</p>
+          </Reveal>
+          <div className="mx-auto mt-10 grid max-w-4xl grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4">
+            {[
+              { media: "RTS 19h30", type: "TV nationale", date: "23.06.2024", lang: "FR" },
+              { media: "SRF Schweiz Aktuell", type: "TV nationale", date: "29.08.2024", lang: "DE" },
+              { media: "RSI Telegiornale", type: "TV nationale", date: "13.07.2024", lang: "IT" },
+              { media: "24Heures", type: "Presse écrite", date: "12.06.2024", lang: "FR" },
+              { media: "Télé Vaud-Fribourg", type: "TV régionale", date: "06.04.2022", lang: "FR" },
+              { media: "RTS Radio Matinale", type: "Radio nationale", date: "24.06.2022", lang: "FR" },
+              { media: "Rouge FM", type: "Radio", date: "30.06.2022", lang: "FR" },
+              { media: "LFM", type: "Radio", date: "06.03.2022", lang: "FR" },
+              { media: "La Côte", type: "Presse écrite", date: "01.03.2022", lang: "FR" },
+            ].map((item, i) => (
+              <Reveal key={item.media + item.date} delay={i * 0.03}>
+                <div className="flex flex-col rounded-xl border border-border bg-card p-4 text-center">
+                  <span className="font-heading text-sm font-bold">{item.media}</span>
+                  <span className="mt-1 text-xs text-muted-foreground">{item.type}</span>
+                  <span className="mt-1 text-xs text-muted-foreground/70">{item.date} · {item.lang}</span>
+                </div>
+              </Reveal>
+            ))}
+          </div>
         </div>
       </section>
 

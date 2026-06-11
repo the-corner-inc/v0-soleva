@@ -9,25 +9,23 @@ export const CTA_DESTINATION = "/contact"
 
 export const CONTACT = {
   businessName: "Soleva",
-  fullName: "Soleva — The Solar Electric Van",
-  // TODO: Replace with real client data — confirm public phone number.
-  phone: "",
+  fullName: "ASSOCIATION SOLEVA",
+  phone: "+41 77 420 74 40",
   email: "info@soleva.org",
   ceoEmail: "curdin.wuethrich@soleva.org",
   address: {
-    // TODO: Replace with real client data — confirm official address.
-    street: "",
-    zip: "",
-    city: "Lausanne",
+    street: "Rue de Lausanne 64",
+    zip: "1020",
+    city: "Renens VD",
     canton: "Vaud",
     country: "Suisse",
   },
   geo: {
-    latitude: 46.5197, // Lausanne approximate — TODO: update with exact coordinates
-    longitude: 6.6323,
+    latitude: 46.5354, // Renens
+    longitude: 6.5886,
   },
-  legalForm: "Association", // TODO: Confirm exact legal form
-  IDE: "", // TODO: Confirm if registered in commercial register
+  legalForm: "Association",
+  IDE: "",
 } as const
 
 export const SOCIALS = {
