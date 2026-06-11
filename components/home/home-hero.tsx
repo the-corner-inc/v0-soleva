@@ -1,4 +1,3 @@
-import Image from "next/image"
 import Link from "next/link"
 import { ArrowRight, Sun } from "lucide-react"
 import { type Locale } from "@/lib/i18n/config"
@@ -11,14 +10,16 @@ export function HomeHero({ locale, dict }: { locale: Locale; dict: Dictionary })
   return (
     <section className="relative isolate overflow-hidden bg-dark text-dark-foreground">
       <div className="absolute inset-0 -z-10">
-        <Image
-          src={IMAGES.hero || "/placeholder.svg"}
-          alt=""
-          fill
-          priority
-          sizes="100vw"
-          className="object-cover"
-        />
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          poster={IMAGES.hero}
+          className="h-full w-full object-cover"
+        >
+          <source src={IMAGES.heroVideo} type="video/mp4" />
+        </video>
         <div className="absolute inset-0 bg-gradient-to-r from-dark/90 via-dark/70 to-dark/30" />
       </div>
 

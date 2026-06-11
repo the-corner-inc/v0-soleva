@@ -11,6 +11,7 @@ import { Reveal } from "@/components/ui/reveal"
 import { Button } from "@/components/ui/button"
 import { CtaBand } from "@/components/ui/cta-band"
 import { withLocale } from "@/lib/navigation"
+import { PARTNER_LOGOS } from "@/lib/constants"
 import { Camera, Aperture } from "lucide-react"
 
 export default async function HomePage({
@@ -74,17 +75,17 @@ export default async function HomePage({
               <h3 className="text-sm font-semibold uppercase tracking-wider text-primary">{dict.home.partners.technical}</h3>
               <div className="mt-4 grid grid-cols-2 gap-4 sm:grid-cols-4">
                 {[
-                  "CSEM",
-                  "EPFL PV-Lab",
-                  "Studer Innotec",
-                  "BRUSA HyPower",
-                ].map((name, i) => (
-                  <Reveal key={name} delay={i * 0.06}>
-                    <div className="flex flex-col items-center justify-center gap-2 rounded-2xl border border-border bg-card p-5">
-                      <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-muted text-xs font-bold text-muted-foreground">
-                        {name.split(" ")[0].slice(0, 3).toUpperCase()}
+                  { name: "CSEM", logo: PARTNER_LOGOS.csem },
+                  { name: "EPFL PV-Lab", logo: PARTNER_LOGOS.epfl },
+                  { name: "Studer Innotec", logo: PARTNER_LOGOS.studer },
+                  { name: "BRUSA HyPower", logo: PARTNER_LOGOS.brusa },
+                ].map((item, i) => (
+                  <Reveal key={item.name} delay={i * 0.06}>
+                    <div className="flex flex-col items-center justify-center gap-3 rounded-2xl border border-border bg-card p-5">
+                      <div className="relative h-16 w-28">
+                        <Image src={item.logo || "/placeholder.svg"} alt={item.name} fill className="object-contain" sizes="112px" />
                       </div>
-                      <span className="text-sm font-semibold text-foreground">{name}</span>
+                      <span className="text-sm font-semibold text-foreground">{item.name}</span>
                     </div>
                   </Reveal>
                 ))}
@@ -96,15 +97,15 @@ export default async function HomePage({
               <h3 className="text-sm font-semibold uppercase tracking-wider text-primary">{dict.home.partners.institutional}</h3>
               <div className="mt-4 grid grid-cols-2 gap-4">
                 {[
-                  "Canton de Vaud",
-                  "Services industriels de Lausanne (SiL)",
-                ].map((name, i) => (
-                  <Reveal key={name} delay={i * 0.06}>
-                    <div className="flex flex-col items-center justify-center gap-2 rounded-2xl border border-border bg-card p-5">
-                      <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-muted text-xs font-bold text-muted-foreground">
-                        {name.split(" ")[0].slice(0, 3).toUpperCase()}
+                  { name: "Canton de Vaud", logo: PARTNER_LOGOS.cantonVaud },
+                  { name: "Services industriels de Lausanne (SiL)", logo: PARTNER_LOGOS.sil },
+                ].map((item, i) => (
+                  <Reveal key={item.name} delay={i * 0.06}>
+                    <div className="flex flex-col items-center justify-center gap-3 rounded-2xl border border-border bg-card p-5">
+                      <div className="relative h-16 w-28">
+                        <Image src={item.logo || "/placeholder.svg"} alt={item.name} fill className="object-contain" sizes="112px" />
                       </div>
-                      <span className="text-center text-sm font-semibold text-foreground">{name}</span>
+                      <span className="text-center text-sm font-semibold text-foreground">{item.name}</span>
                     </div>
                   </Reveal>
                 ))}
@@ -116,9 +117,9 @@ export default async function HomePage({
               <h3 className="text-sm font-semibold uppercase tracking-wider text-primary">{dict.home.partners.awards}</h3>
               <div className="mt-4">
                 <Reveal>
-                  <div className="mx-auto flex max-w-xs flex-col items-center justify-center gap-2 rounded-2xl border border-secondary/30 bg-secondary/5 p-5">
-                    <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-secondary/15 text-lg font-bold text-secondary">
-                      EL
+                  <div className="mx-auto flex max-w-xs flex-col items-center justify-center gap-3 rounded-2xl border border-secondary/30 bg-secondary/5 p-5">
+                    <div className="relative h-16 w-28">
+                      <Image src={PARTNER_LOGOS.energyLab || "/placeholder.svg"} alt="Energy Lab Winner 2022" fill className="object-contain" sizes="112px" />
                     </div>
                     <span className="text-center text-sm font-bold text-secondary">Energy Lab Winner 2022</span>
                   </div>

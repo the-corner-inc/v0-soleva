@@ -140,14 +140,29 @@ export default async function VoyagePage({
       <section className="bg-muted">
         <div className="container-premium section-padding text-center">
           <SectionHeading title={t.polar_title} subtitle={t.polar_body} />
-          <div className="mx-auto mt-8 max-w-2xl rounded-3xl border border-border bg-card p-6">
-            <p className="text-sm text-muted-foreground">
+          <div className="mx-auto mt-8 max-w-2xl rounded-3xl border border-border bg-card p-8">
+            <p className="leading-relaxed text-muted-foreground">
               Retrouvez le suivi en direct sur{" "}
-              <a href="https://www.polarsteps.com/" target="_blank" rel="noopener noreferrer" className="text-primary underline">
+              <a href="https://www.polarsteps.com/" target="_blank" rel="noopener noreferrer" className="font-semibold text-primary underline underline-offset-2">
                 Polar Steps
               </a>
-              .
+              . L'application mobile permet de suivre la position du van en temps réel pendant le tour.
             </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Tour Map */}
+      <section className="bg-background">
+        <div className="container-premium section-padding text-center">
+          <SectionHeading title="Carte du tour" subtitle="De Lausanne à Zurich, en passant par Davos, Lugano et Sion." />
+          <div className="mx-auto mt-8 max-w-4xl overflow-hidden rounded-3xl border border-border">
+            <iframe
+              src="https://www.openstreetmap.org/export/embed.html?bbox=5.8,45.7,10.8,47.9&layer=mapnik"
+              title="Carte du tour de Suisse Soleva"
+              className="h-[400px] w-full"
+              loading="lazy"
+            />
           </div>
         </div>
       </section>
