@@ -5,7 +5,7 @@ import { Montserrat } from "next/font/google"
 import { GoogleAnalytics } from "@next/third-parties/google"
 import { locales, type Locale, isLocale } from "@/lib/i18n/config"
 import { getDictionary, ogLocales } from "@/lib/i18n"
-import { SITE_URL, SITE_NAME } from "@/lib/constants"
+import { SITE_URL, SITE_NAME, SITE } from "@/lib/constants"
 import { Navbar } from "@/components/layout/navbar"
 import { Footer } from "@/components/layout/footer"
 import { CookieBanner } from "@/components/layout/cookie-banner"
@@ -47,6 +47,10 @@ export async function generateMetadata({
     },
     description: dict.meta.home.description,
     applicationName: SITE_NAME,
+    icons: {
+      icon: SITE.faviconUrl,
+      apple: SITE.faviconUrl,
+    },
     alternates: {
       canonical: `${SITE_URL}/${locale}`,
       languages,
