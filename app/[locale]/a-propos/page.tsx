@@ -104,7 +104,7 @@ export default async function AboutPage({
           </Reveal>
           <ol className="mt-10 flex flex-col gap-0">
             {milestones.map((m, i) => (
-              <Reveal key={m.year} delay={i * 0.05}>
+              <Reveal key={`${m.year}-${m.title.fr}`} delay={i * 0.05}>
                 <li className="relative flex gap-6 pb-10 last:pb-0">
                   <div className="flex flex-col items-center">
                     <span
@@ -116,7 +116,7 @@ export default async function AboutPage({
                             : "border-2 border-border bg-card text-muted-foreground"
                       }`}
                     >
-                      {m.year.slice(2)}
+                      {m.year}
                     </span>
                     {i < milestones.length - 1 && <span className="mt-1 w-px flex-1 bg-border" aria-hidden="true" />}
                   </div>

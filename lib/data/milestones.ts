@@ -105,7 +105,7 @@ export const milestones: Milestone[] = [
     },
   },
   {
-    year: "2025-2026",
+    year: "25-26",
     status: "current",
     title: {
       fr: "Nouveau départ",

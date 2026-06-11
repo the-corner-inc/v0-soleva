@@ -11,8 +11,7 @@ import { Reveal } from "@/components/ui/reveal"
 import { Button } from "@/components/ui/button"
 import { CtaBand } from "@/components/ui/cta-band"
 import { withLocale } from "@/lib/navigation"
-import { SOCIALS } from "@/lib/constants"
-import { Camera, ExternalLink, Aperture } from "lucide-react"
+import { Camera, Aperture } from "lucide-react"
 
 export default async function HomePage({
   params,
@@ -73,11 +72,19 @@ export default async function HomePage({
             {/* Partenaires techniques */}
             <div>
               <h3 className="text-sm font-semibold uppercase tracking-wider text-primary">{dict.home.partners.technical}</h3>
-              <div className="mt-4 grid grid-cols-2 gap-3 sm:grid-cols-4">
-                {["CSEM", "EPFL PV-Lab", "Studer Innotec", "BRUSA HyPower"].map((name, i) => (
+              <div className="mt-4 grid grid-cols-2 gap-4 sm:grid-cols-4">
+                {[
+                  "CSEM",
+                  "EPFL PV-Lab",
+                  "Studer Innotec",
+                  "BRUSA HyPower",
+                ].map((name, i) => (
                   <Reveal key={name} delay={i * 0.06}>
-                    <div className="flex items-center justify-center rounded-2xl border border-border bg-card px-6 py-5 text-center text-sm font-semibold text-muted-foreground">
-                      {name}
+                    <div className="flex flex-col items-center justify-center gap-2 rounded-2xl border border-border bg-card p-5">
+                      <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-muted text-xs font-bold text-muted-foreground">
+                        {name.split(" ")[0].slice(0, 3).toUpperCase()}
+                      </div>
+                      <span className="text-sm font-semibold text-foreground">{name}</span>
                     </div>
                   </Reveal>
                 ))}
@@ -87,11 +94,17 @@ export default async function HomePage({
             {/* Soutiens institutionnels */}
             <div>
               <h3 className="text-sm font-semibold uppercase tracking-wider text-primary">{dict.home.partners.institutional}</h3>
-              <div className="mt-4 grid grid-cols-2 gap-3 sm:grid-cols-2">
-                {["Canton de Vaud", "Services industriels de Lausanne (SiL)"].map((name, i) => (
+              <div className="mt-4 grid grid-cols-2 gap-4">
+                {[
+                  "Canton de Vaud",
+                  "Services industriels de Lausanne (SiL)",
+                ].map((name, i) => (
                   <Reveal key={name} delay={i * 0.06}>
-                    <div className="flex items-center justify-center rounded-2xl border border-border bg-card px-6 py-5 text-center text-sm font-semibold text-muted-foreground">
-                      {name}
+                    <div className="flex flex-col items-center justify-center gap-2 rounded-2xl border border-border bg-card p-5">
+                      <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-muted text-xs font-bold text-muted-foreground">
+                        {name.split(" ")[0].slice(0, 3).toUpperCase()}
+                      </div>
+                      <span className="text-center text-sm font-semibold text-foreground">{name}</span>
                     </div>
                   </Reveal>
                 ))}
@@ -103,8 +116,11 @@ export default async function HomePage({
               <h3 className="text-sm font-semibold uppercase tracking-wider text-primary">{dict.home.partners.awards}</h3>
               <div className="mt-4">
                 <Reveal>
-                  <div className="mx-auto flex max-w-xs items-center justify-center rounded-2xl border border-secondary/30 bg-secondary/5 px-6 py-5 text-center text-sm font-bold text-secondary">
-                    Energy Lab Winner 2022
+                  <div className="mx-auto flex max-w-xs flex-col items-center justify-center gap-2 rounded-2xl border border-secondary/30 bg-secondary/5 p-5">
+                    <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-secondary/15 text-lg font-bold text-secondary">
+                      EL
+                    </div>
+                    <span className="text-center text-sm font-bold text-secondary">Energy Lab Winner 2022</span>
                   </div>
                 </Reveal>
               </div>
@@ -122,16 +138,13 @@ export default async function HomePage({
             </span>
             <h2 className="mt-6 font-heading text-2xl font-bold sm:text-3xl">{dict.home.documentary.title}</h2>
             <p className="mx-auto mt-4 max-w-2xl leading-relaxed text-dark-foreground/70">{dict.home.documentary.subtitle}</p>
-            <div className="mt-8">
-              <Button
-                size="lg"
-                className="bg-secondary text-secondary-foreground hover:bg-secondary/90"
-                render={
-                  <a href={SOCIALS.youtube} target="_blank" rel="noopener noreferrer">
-                    <ExternalLink className="mr-2 h-4 w-4" />
-                    Voir sur YouTube
-                  </a>
-                }
+            <div className="mx-auto mt-8 max-w-3xl aspect-video overflow-hidden rounded-2xl">
+              <iframe
+                className="h-full w-full"
+                src="https://www.youtube.com/embed/6ScnYhFPv5w"
+                title="Soleva — L'aventure Soleva"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
               />
             </div>
           </Reveal>

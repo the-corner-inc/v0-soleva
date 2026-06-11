@@ -128,33 +128,45 @@ export default async function SupportPage({
               <h2 className="font-heading text-center text-2xl font-bold sm:text-3xl">{t.iban.title}</h2>
               <p className="mt-3 text-center leading-relaxed text-muted-foreground">{t.iban.body}</p>
             </Reveal>
-            <div className="mt-8 rounded-3xl border border-border bg-card p-8">
-              <dl className="grid gap-4">
-                <div className="grid grid-cols-2 gap-2 rounded-xl bg-muted p-4">
-                  <dt className="text-sm font-semibold text-muted-foreground">{t.iban.account_holder}</dt>
-                  <dd className="text-sm text-foreground">ASSOCIATION SOLEVA</dd>
-                </div>
-                <div className="grid grid-cols-2 gap-2 rounded-xl bg-muted p-4">
-                  <dt className="text-sm font-semibold text-muted-foreground">{t.iban.address}</dt>
-                  <dd className="text-sm text-foreground">Rue de Lausanne 64, 1020 Renens VD</dd>
-                </div>
-                <div className="grid grid-cols-2 gap-2 rounded-xl bg-muted p-4">
-                  <dt className="text-sm font-semibold text-muted-foreground">{t.iban.iban_label}</dt>
-                  <dd className="font-mono text-sm text-foreground">CH36 0076 7000 L553 2228 7</dd>
-                </div>
-                <div className="grid grid-cols-2 gap-2 rounded-xl bg-muted p-4">
-                  <dt className="text-sm font-semibold text-muted-foreground">{t.iban.bic_label}</dt>
-                  <dd className="font-mono text-sm text-foreground">BCVLCH2LXXX</dd>
-                </div>
-                <div className="grid grid-cols-2 gap-2 rounded-xl bg-muted p-4">
-                  <dt className="text-sm font-semibold text-muted-foreground">{t.iban.bank_label}</dt>
-                  <dd className="text-sm text-foreground">Banque Cantonale Vaudoise</dd>
-                </div>
-                <div className="grid grid-cols-2 gap-2 rounded-xl bg-muted p-4">
-                  <dt className="text-sm font-semibold text-muted-foreground">{t.iban.description_label}</dt>
-                  <dd className="font-mono text-sm text-foreground">{t.iban.description_value}</dd>
-                </div>
-              </dl>
+            <div className="mt-8 grid gap-6 lg:grid-cols-[1fr_auto]">
+              <div className="rounded-3xl border border-border bg-card p-8">
+                <dl className="grid gap-4">
+                  <div className="grid grid-cols-2 gap-2 rounded-xl bg-muted p-4">
+                    <dt className="text-sm font-semibold text-muted-foreground">{t.iban.account_holder}</dt>
+                    <dd className="text-sm text-foreground">ASSOCIATION SOLEVA</dd>
+                  </div>
+                  <div className="grid grid-cols-2 gap-2 rounded-xl bg-muted p-4">
+                    <dt className="text-sm font-semibold text-muted-foreground">{t.iban.address}</dt>
+                    <dd className="text-sm text-foreground">Rue de Lausanne 64, 1020 Renens VD</dd>
+                  </div>
+                  <div className="grid grid-cols-2 gap-2 rounded-xl bg-muted p-4">
+                    <dt className="text-sm font-semibold text-muted-foreground">{t.iban.iban_label}</dt>
+                    <dd className="font-mono text-sm text-foreground">CH36 0076 7000 L553 2228 7</dd>
+                  </div>
+                  <div className="grid grid-cols-2 gap-2 rounded-xl bg-muted p-4">
+                    <dt className="text-sm font-semibold text-muted-foreground">{t.iban.bic_label}</dt>
+                    <dd className="font-mono text-sm text-foreground">BCVLCH2LXXX</dd>
+                  </div>
+                  <div className="grid grid-cols-2 gap-2 rounded-xl bg-muted p-4">
+                    <dt className="text-sm font-semibold text-muted-foreground">{t.iban.bank_label}</dt>
+                    <dd className="text-sm text-foreground">Banque Cantonale Vaudoise</dd>
+                  </div>
+                  <div className="grid grid-cols-2 gap-2 rounded-xl bg-muted p-4">
+                    <dt className="text-sm font-semibold text-muted-foreground">{t.iban.description_label}</dt>
+                    <dd className="font-mono text-sm text-foreground">{t.iban.description_value}</dd>
+                  </div>
+                </dl>
+              </div>
+              <div className="flex flex-col items-center justify-center rounded-3xl border border-border bg-card p-6">
+                <img
+                  src="https://d1oh1gq3c6bbc1.cloudfront.net/public/media/e659e5c6e16cb7fa809013fadb5a4b8670cf2a456e020b890259596134acc4ac-211082.webp"
+                  alt="QR Code pour don bancaire Soleva"
+                  width={180}
+                  height={180}
+                  className="rounded-xl"
+                />
+                <p className="mt-3 text-xs text-muted-foreground text-center">Scannez pour payer</p>
+              </div>
             </div>
           </div>
         </div>
