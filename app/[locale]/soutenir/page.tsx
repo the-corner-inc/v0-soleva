@@ -3,7 +3,8 @@ import Link from "next/link"
 import { isLocale, type Locale } from "@/lib/i18n/config"
 import { getDictionary } from "@/lib/i18n"
 import { notFound } from "next/navigation"
-import { SITE_URL, KEY_FIGURES } from "@/lib/constants"
+import { SITE_URL, KEY_FIGURES, DONATION } from "@/lib/constants"
+import { sponsorTiers } from "@/lib/data/sponsor-tiers"
 import { withLocale } from "@/lib/navigation"
 import { PageHero } from "@/components/layout/page-hero"
 import { SectionHeading } from "@/components/ui/section-heading"
@@ -11,6 +12,7 @@ import { Reveal } from "@/components/ui/reveal"
 import { Button } from "@/components/ui/button"
 import { CtaBand } from "@/components/ui/cta-band"
 import { Heart, Handshake, Users, Share2, ArrowRight } from "lucide-react"
+import { CopyIbanButton } from "@/components/ui/copy-iban-button"
 
 export async function generateMetadata({
   params,
@@ -39,8 +41,8 @@ export default async function SupportPage({
   const t = dict.support
 
   const ways = [
-    { icon: Heart, title: t.ways.donate_title, desc: t.ways.donate_desc, cta: t.ways.donate_cta, href: "/contact" },
-    { icon: Handshake, title: t.ways.sponsor_title, desc: t.ways.sponsor_desc, cta: t.ways.sponsor_cta, href: "/contact" },
+    { icon: Heart, title: t.ways.donate_title, desc: t.ways.donate_desc, cta: t.ways.donate_cta, href: "#donation" },
+    { icon: Handshake, title: t.ways.sponsor_title, desc: t.ways.sponsor_desc, cta: t.ways.sponsor_cta, href: "#sponsorship" },
     { icon: Users, title: t.ways.volunteer_title, desc: t.ways.volunteer_desc, cta: t.ways.volunteer_cta, href: "/contact" },
     { icon: Share2, title: t.ways.share_title, desc: t.ways.share_desc, cta: null, href: null },
   ]
@@ -74,7 +76,7 @@ export default async function SupportPage({
                     <p className="mt-3 flex-1 text-base leading-relaxed text-muted-foreground">{way.desc}</p>
                     {way.cta && way.href ? (
                       <Link
-                        href={withLocale(l, way.href)}
+                        href={way.href.startsWith("#") ? way.href : withLocale(l, way.href)}
                         className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-primary transition-colors hover:text-primary/80"
                       >
                         {way.cta}
@@ -82,6 +84,49 @@ export default async function SupportPage({
                       </Link>
                     ) : null}
                   </article>
+                </Reveal>
+              )
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* Sponsoring Tiers */}
+      <section className="bg-background">
+        <div className="container-premium section-padding">
+          <SectionHeading title={t.sponsor_tiers_title} subtitle={t.sponsor_tiers_subtitle} />
+          <div className="mx-auto mt-10 grid max-w-5xl gap-6 md:grid-cols-3">
+            {sponsorTiers.map((tier, i) => {
+              const colors = [
+                "border-muted-foreground/30 bg-muted/50",
+                "border-secondary/40 bg-secondary/5",
+                "border-primary/30 bg-primary/5",
+              ]
+              const badges = ["bg-muted-foreground/10 text-muted-foreground", "bg-secondary/15 text-secondary", "bg-primary/10 text-primary"]
+              return (
+                <Reveal key={tier.key} delay={i * 0.08}>
+                  <div className={`flex h-full flex-col rounded-3xl border ${colors[i]} p-8`}>
+                    <div className={`inline-flex self-start rounded-full px-3 py-1 text-xs font-bold uppercase tracking-wider ${badges[i]}`}>
+                      {tier.key}
+                    </div>
+                    <p className="mt-4 font-heading text-3xl font-extrabold">{tier.price}</p>
+                    <p className="mt-1 text-xs text-muted-foreground uppercase tracking-wide">{t.sponsor_features}</p>
+                    <ul className="mt-6 flex-1 space-y-3">
+                      {tier.features[l].map((f, j) => (
+                        <li key={j} className="flex items-start gap-2 text-sm text-muted-foreground">
+                          <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-secondary" />
+                          {f}
+                        </li>
+                      ))}
+                    </ul>
+                    <Link
+                      href={withLocale(l, "/contact")}
+                      className="mt-8 inline-flex items-center justify-center rounded-lg bg-primary px-4 py-2.5 text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary/90"
+                    >
+                      {t.sponsor_cta}
+                      <ArrowRight className="ml-2 h-4 w-4" />
+                    </Link>
+                  </div>
                 </Reveal>
               )
             })}
@@ -121,7 +166,7 @@ export default async function SupportPage({
       </section>
 
       {/* IBAN Donation */}
-      <section className="bg-background">
+      <section id="donation" className="bg-background">
         <div className="container-premium section-padding">
           <div className="mx-auto max-w-2xl">
             <Reveal>
@@ -133,27 +178,30 @@ export default async function SupportPage({
                 <dl className="grid gap-4">
                   <div className="grid grid-cols-2 gap-2 rounded-xl bg-muted p-4">
                     <dt className="text-sm font-semibold text-muted-foreground">{t.iban.account_holder}</dt>
-                    <dd className="text-sm text-foreground">ASSOCIATION SOLEVA</dd>
+                    <dd className="text-sm text-foreground">{DONATION.beneficiary}</dd>
                   </div>
                   <div className="grid grid-cols-2 gap-2 rounded-xl bg-muted p-4">
                     <dt className="text-sm font-semibold text-muted-foreground">{t.iban.address}</dt>
-                    <dd className="text-sm text-foreground">Rue de Lausanne 64, 1020 Renens VD</dd>
+                    <dd className="text-sm text-foreground">{DONATION.addressLine1}, {DONATION.addressLine2}</dd>
                   </div>
                   <div className="grid grid-cols-2 gap-2 rounded-xl bg-muted p-4">
                     <dt className="text-sm font-semibold text-muted-foreground">{t.iban.iban_label}</dt>
-                    <dd className="font-mono text-sm text-foreground">CH36 0076 7000 L553 2228 7</dd>
+                    <dd className="flex items-center gap-2">
+                      <span className="font-mono text-sm text-foreground">{DONATION.ibanFormatted}</span>
+                      <CopyIbanButton iban={DONATION.iban} />
+                    </dd>
                   </div>
                   <div className="grid grid-cols-2 gap-2 rounded-xl bg-muted p-4">
                     <dt className="text-sm font-semibold text-muted-foreground">{t.iban.bic_label}</dt>
-                    <dd className="font-mono text-sm text-foreground">BCVLCH2LXXX</dd>
+                    <dd className="font-mono text-sm text-foreground">{DONATION.bic}</dd>
                   </div>
                   <div className="grid grid-cols-2 gap-2 rounded-xl bg-muted p-4">
                     <dt className="text-sm font-semibold text-muted-foreground">{t.iban.bank_label}</dt>
-                    <dd className="text-sm text-foreground">Banque Cantonale Vaudoise</dd>
+                    <dd className="text-sm text-foreground">{DONATION.bank}</dd>
                   </div>
                   <div className="grid grid-cols-2 gap-2 rounded-xl bg-muted p-4">
                     <dt className="text-sm font-semibold text-muted-foreground">{t.iban.description_label}</dt>
-                    <dd className="font-mono text-sm text-foreground">{t.iban.description_value}</dd>
+                    <dd className="font-mono text-sm text-foreground">{DONATION.reference}</dd>
                   </div>
                 </dl>
               </div>

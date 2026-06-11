@@ -2,7 +2,7 @@ import { notFound } from "next/navigation"
 import type { Metadata } from "next"
 import { type Locale, isLocale } from "@/lib/i18n/config"
 import { getDictionary } from "@/lib/i18n"
-import { SITE_URL } from "@/lib/constants"
+import { SITE_URL, HOSTING } from "@/lib/constants"
 import { PageHero } from "@/components/layout/page-hero"
 
 export async function generateMetadata({

@@ -102,6 +102,15 @@ export default async function AboutPage({
           <Reveal>
             <h2 className="font-heading text-2xl font-bold sm:text-3xl">{a.timeline_title}</h2>
           </Reveal>
+          <div className="mt-6 overflow-hidden rounded-2xl">
+            <Image
+              src="https://d1oh1gq3c6bbc1.cloudfront.net/public/media/a1c107719eb8ba63f499cdcab3f9f600c0208f86a855f817a6c668f659b3390c-157679.webp"
+              alt="Roadmap Soleva"
+              width={1200}
+              height={600}
+              className="w-full h-auto"
+            />
+          </div>
           <ol className="mt-10 flex flex-col gap-0">
             {milestones.map((m, i) => (
               <Reveal key={`${m.year}-${m.title.fr}`} delay={i * 0.05}>

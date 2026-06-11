@@ -230,7 +230,11 @@
       "bank_label": "Banca",
       "description_label": "Causale",
       "description_value": "Donazione al progetto Soleva"
-    }
+    },
+    "sponsor_tiers_title": "Pacchetti di sponsorizzazione",
+    "sponsor_tiers_subtitle": "Tre modi per associarsi al progetto Soleva e guadagnare visibilità.",
+    "sponsor_cta": "Discuti una sponsorizzazione",
+    "sponsor_features": "Vantaggi"
   },
   "about": {
     "hero": {

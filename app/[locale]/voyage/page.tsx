@@ -5,12 +5,14 @@ import { isLocale, type Locale } from "@/lib/i18n/config"
 import { getDictionary } from "@/lib/i18n"
 import { notFound } from "next/navigation"
 import { SITE_URL, KEY_FIGURES } from "@/lib/constants"
+import { pastEvents, POLAR_STEPS_URL } from "@/lib/data/events"
 import { withLocale } from "@/lib/navigation"
 import { PageHero } from "@/components/layout/page-hero"
 import { SectionHeading } from "@/components/ui/section-heading"
 import { Reveal } from "@/components/ui/reveal"
 import { CtaBand } from "@/components/ui/cta-band"
 import { Button } from "@/components/ui/button"
+import { TourMap } from "@/components/voyage/tour-map"
 import { MapPin } from "lucide-react"
 
 export async function generateMetadata({
@@ -28,7 +30,7 @@ export async function generateMetadata({
   }
 }
 
-const STOPS = ["Lausanne", "Genève", "Sion", "Bern", "Zürich", "Lugano", "Davos", "Basel"]
+const STOPS = ["Lausanne", "Genève", "Sion", "Lugano", "Davos", "Zürich", "Basel", "Bern"]
 
 export default async function VoyagePage({
   params,
@@ -111,15 +113,10 @@ export default async function VoyagePage({
         <div className="container-premium section-padding">
           <SectionHeading title={t.events_title} />
           <div className="mx-auto mt-10 grid max-w-4xl gap-4 sm:grid-cols-2">
-            {[
-              { name: "Avant-première documentaire", location: "Lausanne", date: "04.10.2024" },
-              { name: "Vanlife Expo Grenoble (Coup de cœur)", location: "Grenoble", date: "04-05.05.2024" },
-              { name: "Congrès photovoltaïque Suisse", location: "Suisse", date: "03.2024" },
-              { name: "Roadtrip Expo", location: "Suisse", date: "11.2023" },
-            ].map((event, i) => (
-              <Reveal key={event.name} delay={i * 0.06}>
+            {pastEvents.map((event, i) => (
+              <Reveal key={event.name[l]} delay={i * 0.06}>
                 <div className="rounded-2xl border border-border bg-card p-6">
-                  <h3 className="font-heading text-lg font-semibold">{event.name}</h3>
+                  <h3 className="font-heading text-lg font-semibold">{event.name[l]}</h3>
                   <div className="mt-2 flex items-center gap-4 text-sm text-muted-foreground">
                     <span className="inline-flex items-center gap-1"><MapPin className="h-3.5 w-3.5" />{event.location}</span>
                     <span>{event.date}</span>
@@ -143,7 +140,7 @@ export default async function VoyagePage({
           <div className="mx-auto mt-8 max-w-2xl rounded-3xl border border-border bg-card p-8">
             <p className="leading-relaxed text-muted-foreground">
               Retrouvez le suivi en direct sur{" "}
-              <a href="https://www.polarsteps.com/" target="_blank" rel="noopener noreferrer" className="font-semibold text-primary underline underline-offset-2">
+              <a href={POLAR_STEPS_URL} target="_blank" rel="noopener noreferrer" className="font-semibold text-primary underline underline-offset-2">
                 Polar Steps
               </a>
               . L'application mobile permet de suivre la position du van en temps réel pendant le tour.
@@ -156,13 +153,8 @@ export default async function VoyagePage({
       <section className="bg-background">
         <div className="container-premium section-padding text-center">
           <SectionHeading title="Carte du tour" subtitle="De Lausanne à Zurich, en passant par Davos, Lugano et Sion." />
-          <div className="mx-auto mt-8 max-w-4xl overflow-hidden rounded-3xl border border-border">
-            <iframe
-              src="https://www.openstreetmap.org/export/embed.html?bbox=5.8,45.7,10.8,47.9&layer=mapnik"
-              title="Carte du tour de Suisse Soleva"
-              className="h-[400px] w-full"
-              loading="lazy"
-            />
+          <div className="mx-auto mt-8 max-w-4xl">
+            <TourMap />
           </div>
         </div>
       </section>

@@ -134,3 +134,19 @@ export const KEY_FIGURES = {
 
 // TODO: Client must provide GA4 Measurement ID via NEXT_PUBLIC_GA_MEASUREMENT_ID.
 export const COOKIE_CONSENT_KEY = "soleva-cookie-consent"
+
+export const DONATION = {
+  beneficiary: "ASSOCIATION SOLEVA",
+  addressLine1: "Rue de Lausanne 64",
+  addressLine2: "1020 Renens VD",
+  iban: "CH3600767000L55322287",
+  ibanFormatted: "CH36 0076 7000 L553 2228 7",
+  bic: "BCVLCH2LXXX",
+  bank: "Banque Cantonale Vaudoise",
+  reference: "Donation au projet Soleva",
+} as const
+
+export const HOSTING = {
+  provider: "The Corner Factory SA",
+  server: "Serveur VPS Infomaniak, Suisse",
+} as const

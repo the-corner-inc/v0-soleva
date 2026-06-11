@@ -230,7 +230,11 @@
       "bank_label": "Banque",
       "description_label": "Communication",
       "description_value": "Donation au projet Soleva"
-    }
+    },
+    "sponsor_tiers_title": "Formules de sponsoring",
+    "sponsor_tiers_subtitle": "Trois formules pour vous associer au projet Soleva et gagner en visibilité.",
+    "sponsor_cta": "Discuter d'un sponsoring",
+    "sponsor_features": "Avantages"
   },
   "about": {
     "hero": {

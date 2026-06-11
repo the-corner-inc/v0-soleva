@@ -230,7 +230,11 @@
       "bank_label": "Bank",
       "description_label": "Verwendungszweck",
       "description_value": "Spende an das Soleva-Projekt"
-    }
+    },
+    "sponsor_tiers_title": "Sponsoring-Pakete",
+    "sponsor_tiers_subtitle": "Drei Möglichkeiten, das Soleva-Projekt zu unterstützen und Sichtbarkeit zu gewinnen.",
+    "sponsor_cta": "Sponsoring besprechen",
+    "sponsor_features": "Vorteile"
   },
   "about": {
     "hero": {

@@ -230,7 +230,11 @@
       "bank_label": "Bank",
       "description_label": "Reference",
       "description_value": "Donation to the Soleva project"
-    }
+    },
+    "sponsor_tiers_title": "Sponsorship packages",
+    "sponsor_tiers_subtitle": "Three ways to partner with the Soleva project and gain visibility.",
+    "sponsor_cta": "Discuss sponsorship",
+    "sponsor_features": "Benefits"
   },
   "about": {
     "hero": {
