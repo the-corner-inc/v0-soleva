@@ -215,7 +215,15 @@
     "timeline_title": "Wichtige Meilensteine",
     "team_title": "Das Team",
     "team_subtitle": "Ein Team von Ingenieuren und Begeisterten, unterstützt von Dutzenden Freiwilligen.",
-    "team_todo": "Teamliste von Soleva zu validieren."
+    "team_todo": "Teamliste von Soleva zu validieren.",
+    "mentors_title": "Mentoren und externe Berater",
+    "mentors_subtitle": "Anerkannte Fachleute, die Soleva begleiten.",
+    "press_title": "Soleva in den Medien",
+    "press_subtitle": "Das Projekt wurde von führenden Schweizer Medien begleitet.",
+    "documentary_title": "Das Soleva-Abenteuer — der Dokumentarfilm",
+    "documentary_subtitle": "Premiere am 4. Oktober 2024 auf der Esplanade de Montbenon, Lausanne.",
+    "partners_title": "Partner und Unterstützer",
+    "partners_subtitle": "Soleva kommt dank seiner technischen und institutionellen Partner und seiner Auszeichnungen voran."
   },
   "contact": {
     "hero": {
@@ -278,14 +286,14 @@
   "legal": {
     "title": "Impressum",
     "editor_title": "Herausgeber der Website",
-    "editor_body": "Verein Soleva, Lausanne, Schweiz. E-Mail: info@soleva.org.",
+    "editor_body": "Verein Soleva, Rue de Lausanne 64, 1020 Renens VD, Schweiz. Telefon: +41 77 420 74 40. E-Mail: info@soleva.org.",
     "form_title": "Rechtsform",
-    "form_body": "Verein (zu bestätigen).",
+    "form_body": "Verein nach Schweizer Recht.",
     "hosting_title": "Hosting",
-    "hosting_body": "Vercel Inc., San Francisco, CA, USA.",
+    "hosting_body": "The Corner Factory SA — Infomaniak VPS-Server, Schweiz.",
     "credits_title": "Konzeption und Entwicklung",
     "credits_body": "The Corner Factories.",
-    "todo": "Vollständiger rechtlicher Name, Adresse und UID-Nummer vom Kunden zu bestätigen."
+    "todo": "UID-Nummer vom Kunden zu bestätigen."
   },
   "privacy": {
     "title": "Datenschutzerklärung",

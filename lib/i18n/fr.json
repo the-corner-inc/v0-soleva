@@ -215,7 +215,15 @@
     "timeline_title": "Les grandes étapes",
     "team_title": "L'équipe",
     "team_subtitle": "Une équipe d'ingénieurs et de passionnés, soutenue par des dizaines de bénévoles.",
-    "team_todo": "Liste de l'équipe à valider par Soleva."
+    "team_todo": "Liste de l'équipe à valider par Soleva.",
+    "mentors_title": "Tuteurs et conseillers externes",
+    "mentors_subtitle": "Des expert·e·s reconnu·e·s qui accompagnent Soleva.",
+    "press_title": "Soleva dans les médias",
+    "press_subtitle": "Le projet a été couvert par les principaux médias suisses.",
+    "documentary_title": "L'aventure Soleva — le documentaire",
+    "documentary_subtitle": "Première le 4 octobre 2024 à l'Esplanade de Montbenon, Lausanne.",
+    "partners_title": "Partenaires et soutiens",
+    "partners_subtitle": "Soleva avance grâce à ses partenaires techniques, institutionnels et à ses distinctions."
   },
   "contact": {
     "hero": {
@@ -278,14 +286,14 @@
   "legal": {
     "title": "Mentions légales",
     "editor_title": "Éditeur du site",
-    "editor_body": "Association Soleva, Lausanne, Suisse. Email : info@soleva.org.",
+    "editor_body": "Association Soleva, Rue de Lausanne 64, 1020 Renens VD, Suisse. Téléphone : +41 77 420 74 40. Email : info@soleva.org.",
     "form_title": "Forme juridique",
-    "form_body": "Association (à confirmer).",
+    "form_body": "Association de droit suisse.",
     "hosting_title": "Hébergement",
-    "hosting_body": "Vercel Inc., San Francisco, CA, États-Unis.",
+    "hosting_body": "The Corner Factory SA — Serveur VPS Infomaniak, Suisse.",
     "credits_title": "Conception et développement",
     "credits_body": "The Corner Factories.",
-    "todo": "Nom légal complet, adresse et numéro IDE à confirmer par le client."
+    "todo": "Numéro IDE à confirmer par le client."
   },
   "privacy": {
     "title": "Politique de confidentialité",

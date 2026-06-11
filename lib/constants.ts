@@ -8,26 +8,42 @@ export const SITE_NAME = "Soleva"
 export const CTA_DESTINATION = "/contact"
 
 export const CONTACT = {
-  businessName: "Soleva",
+  businessName: "Association Soleva",
   fullName: "Soleva — The Solar Electric Van",
-  // TODO: Replace with real client data — confirm public phone number.
-  phone: "",
+  phone: "+41 77 420 74 40",
+  phoneHref: "+41774207440",
   email: "info@soleva.org",
   ceoEmail: "curdin.wuethrich@soleva.org",
   address: {
-    // TODO: Replace with real client data — confirm official address.
-    street: "",
-    zip: "",
-    city: "Lausanne",
+    street: "Rue de Lausanne 64",
+    zip: "1020",
+    city: "Renens",
     canton: "Vaud",
     country: "Suisse",
   },
   geo: {
-    latitude: 46.5197, // Lausanne approximate — TODO: update with exact coordinates
-    longitude: 6.6323,
+    latitude: 46.5388, // Renens VD approximate
+    longitude: 6.5878,
   },
-  legalForm: "Association", // TODO: Confirm exact legal form
+  legalForm: "Association",
   IDE: "", // TODO: Confirm if registered in commercial register
+} as const
+
+// Bank details for donations (from the previous soleva.org site).
+export const DONATION = {
+  beneficiary: "ASSOCIATION SOLEVA",
+  addressLine1: "Rue de Lausanne 64",
+  addressLine2: "1020 Renens VD",
+  iban: "CH3600767000L55322287",
+  bic: "BCVLCH2LXXX",
+  bank: "Banque Cantonale Vaudoise",
+  reference: "Donation au projet Soleva",
+} as const
+
+// Hosting provider for legal mentions.
+export const HOSTING = {
+  provider: "The Corner Factory SA",
+  server: "Serveur VPS Infomaniak, Suisse",
 } as const
 
 export const SOCIALS = {

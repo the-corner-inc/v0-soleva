@@ -165,7 +165,7 @@ export const services: Service[] = [
     seoKeywords: [
       "van solaire Suisse",
       "panneaux solaires camper van",
-      "CSEM photovoltaïque mobilité",
+      "CSEM photovolta��que mobilité",
       "toiture solaire déployable véhicule",
     ],
     content: {
@@ -183,6 +183,7 @@ export const services: Service[] = [
           "Système déployable pour maximiser la surface de captation",
           "Recharge jusqu'à 150 km d'autonomie par jour de soleil",
           "Convertisseur DC-DC BRUSA HyPower optimisant le flux panneaux → batterie",
+          "Technologie V2X : alimentation externe d'événements, festivals et services publics",
         ],
         process: [
           { step: 1, title: "Conception", description: "Développement de panneaux adaptés à la surface du toit, en collaboration avec le CSEM et l'EPFL PV-Lab." },
@@ -210,6 +211,7 @@ export const services: Service[] = [
           "Deployable system to maximize the capture surface",
           "Recharges up to 150 km of range per sunny day",
           "BRUSA HyPower DC-DC converter optimizing the panels → battery flow",
+          "V2X technology: external power for events, festivals and public services",
         ],
         process: [
           { step: 1, title: "Design", description: "Developing panels adapted to the roof surface, in collaboration with CSEM and the EPFL PV-Lab." },
@@ -237,6 +239,7 @@ export const services: Service[] = [
           "Ausfahrbares System zur Maximierung der Auffangfläche",
           "Lädt bis zu 150 km Reichweite pro Sonnentag",
           "BRUSA HyPower DC-DC-Konverter zur Optimierung des Flusses Module → Batterie",
+          "V2X-Technologie: externe Stromversorgung von Events, Festivals und öffentlichen Diensten",
         ],
         process: [
           { step: 1, title: "Konzeption", description: "Entwicklung von an die Dachfläche angepassten Modulen, in Zusammenarbeit mit dem CSEM und dem EPFL PV-Lab." },
@@ -264,6 +267,7 @@ export const services: Service[] = [
           "Sistema estensibile per massimizzare la superficie di captazione",
           "Ricarica fino a 150 km di autonomia per giornata di sole",
           "Convertitore DC-DC BRUSA HyPower che ottimizza il flusso pannelli → batteria",
+          "Tecnologia V2X: alimentazione esterna di eventi, festival e servizi pubblici",
         ],
         process: [
           { step: 1, title: "Progettazione", description: "Sviluppo di pannelli adattati alla superficie del tetto, in collaborazione con il CSEM e il PV-Lab dell'EPFL." },
@@ -301,10 +305,12 @@ export const services: Service[] = [
         features: [
           "Chambre avec couchages pour l'équipe",
           "Cuisine équipée",
-          "Salle de bain",
-          "Espace de vie et de travail",
-          "Matériaux recyclés, locaux et durables",
-          "Conception bas carbone intégrée",
+          "Douche perpétuelle pour réduire la consommation d'eau",
+          "Toilettes sèches",
+          "Poêle à masse inertielle pour le chauffage",
+          "Isolation en liège et laine recyclés",
+          "Meubles en bois de récupération",
+          "Conception Low-Tech : solutions intelligentes à faible impact",
         ],
         process: [
           { step: 1, title: "Design", description: "Conception de l'aménagement intérieur en optimisant l'espace, le confort et la sobriété énergétique." },
@@ -328,10 +334,12 @@ export const services: Service[] = [
         features: [
           "Bedroom with sleeping space for the team",
           "Equipped kitchen",
-          "Bathroom",
-          "Living and working space",
-          "Recycled, local and durable materials",
-          "Integrated low-carbon design",
+          "Perpetual shower to reduce water consumption",
+          "Dry toilets",
+          "Thermal-mass stove for heating",
+          "Insulation in recycled cork and wool",
+          "Furniture made from reclaimed wood",
+          "Low-Tech design: smart, low-impact solutions",
         ],
         process: [
           { step: 1, title: "Design", description: "Designing the interior layout by optimizing space, comfort and energy sobriety." },
@@ -355,10 +363,12 @@ export const services: Service[] = [
         features: [
           "Schlafraum mit Schlafplätzen für das Team",
           "Ausgestattete Küche",
-          "Badezimmer",
-          "Wohn- und Arbeitsbereich",
-          "Recycelte, lokale und nachhaltige Materialien",
-          "Integriertes CO₂-armes Design",
+          "Perpetuierliche Dusche zur Reduzierung des Wasserverbrauchs",
+          "Trockentoilette",
+          "Masseofen mit Wärmespeicher zum Heizen",
+          "Dämmung aus recyceltem Kork und Wolle",
+          "Möbel aus Altholz",
+          "Low-Tech-Design: intelligente Lösungen mit geringer Auswirkung",
         ],
         process: [
           { step: 1, title: "Design", description: "Gestaltung des Innenausbaus durch Optimierung von Raum, Komfort und Energiesparsamkeit." },
@@ -382,10 +392,12 @@ export const services: Service[] = [
         features: [
           "Camera con posti letto per il team",
           "Cucina attrezzata",
-          "Bagno",
-          "Spazio di vita e di lavoro",
-          "Materiali riciclati, locali e durevoli",
-          "Progettazione a basse emissioni integrata",
+          "Doccia perpetua per ridurre il consumo d'acqua",
+          "Toilette a secco",
+          "Stufa a massa inerziale per il riscaldamento",
+          "Isolamento in sughero e lana riciclati",
+          "Mobili in legno di recupero",
+          "Progettazione Low-Tech: soluzioni intelligenti a basso impatto",
         ],
         process: [
           { step: 1, title: "Design", description: "Progettazione dell'allestimento interno ottimizzando spazio, comfort e sobrietà energetica." },
