@@ -13,9 +13,10 @@ const OPEN_EVENT = "soleva:open-cookie-settings"
 function applyConsent(granted: boolean) {
   if (typeof window === "undefined") return
   // Google Consent Mode v2
-  const w = window as typeof window & { gtag?: (...args: unknown[]) => void }
-  if (typeof w.gtag === "function") {
-    w.gtag("consent", "update", {
+  // @ts-expect-error gtag injected by GoogleAnalytics
+  if (typeof window.gtag === "function") {
+    // @ts-expect-error gtag
+    window.gtag("consent", "update", {
       analytics_storage: granted ? "granted" : "denied",
     })
   }

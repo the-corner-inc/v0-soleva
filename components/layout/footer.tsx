@@ -1,5 +1,6 @@
 import Link from "next/link"
-import { Sun, Mail, MapPin } from "lucide-react"
+import Image from "next/image"
+import { Mail, MapPin } from "lucide-react"
 import { type Locale } from "@/lib/i18n/config"
 import type { Dictionary } from "@/lib/i18n"
 import { withLocale } from "@/lib/navigation"
@@ -38,11 +39,14 @@ export function Footer({ locale, dict }: { locale: Locale; dict: Dictionary }) {
       <div className="container-premium py-16">
         <div className="grid gap-12 lg:grid-cols-[1.5fr_1fr_1fr_1fr]">
           <div className="max-w-sm">
-            <Link href={withLocale(locale, "/")} className="flex items-center gap-2 font-heading text-xl font-extrabold">
-              <span className="flex h-9 w-9 items-center justify-center rounded-full bg-secondary text-secondary-foreground">
-                <Sun className="h-5 w-5" aria-hidden="true" />
-              </span>
-              Soleva
+            <Link href={withLocale(locale, "/")} className="inline-flex items-center" aria-label="Soleva">
+              <Image
+                src="/images/soleva-logo.webp"
+                alt="Soleva — The Solar Electric Van"
+                width={651}
+                height={281}
+                className="h-9 w-auto"
+              />
             </Link>
             <p className="mt-4 text-sm leading-relaxed text-dark-foreground/70">{dict.footer.description}</p>
             <div className="mt-6 flex flex-col gap-2 text-sm text-dark-foreground/70">

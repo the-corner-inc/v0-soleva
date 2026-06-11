@@ -41,41 +41,41 @@
 }
 
 :root {
-  /* Deep forest green — sustainability, nature */
-  --primary: #1b4332;
-  --primary-foreground: #fefdf5;
+  /* Solar orange — sun, energy, the Soleva brand */
+  --primary: #ff803e;
+  --primary-foreground: #ffffff;
 
-  /* Solar gold — energy, sun, warmth (decorative / on dark only) */
-  --secondary: #d4a017;
-  --secondary-foreground: #1a1a2e;
+  /* Deep teal — trust, technology, contrast to the warm sun */
+  --secondary: #005f60;
+  --secondary-foreground: #ffffff;
 
-  /* Electric blue — technology, EV, innovation */
-  --electric: #2563eb;
+  /* Teal accent — technology, EV, innovation */
+  --electric: #005f60;
   --electric-foreground: #ffffff;
 
   /* Backgrounds */
   --background: #ffffff;
-  --foreground: #2d3748;
+  --foreground: #1f2a2a;
 
   --card: #ffffff;
-  --card-foreground: #2d3748;
+  --card-foreground: #1f2a2a;
   --popover: #ffffff;
-  --popover-foreground: #2d3748;
+  --popover-foreground: #1f2a2a;
 
   /* Warm white / muted surfaces */
-  --muted: #f0f4e8;
-  --muted-foreground: #64748b;
-  --accent: #fefdf5;
-  --accent-foreground: #1b4332;
+  --muted: #eef4f3;
+  --muted-foreground: #5a6b6a;
+  --accent: #fff4ec;
+  --accent-foreground: #005f60;
 
-  /* Deep anthracite — footer / dark sections */
-  --dark: #1a1a2e;
-  --dark-foreground: #fefdf5;
+  /* Deep teal — footer / dark sections */
+  --dark: #043b3c;
+  --dark-foreground: #fdf6f0;
 
   --destructive: #dc2626;
   --border: #e2e8f0;
   --input: #e2e8f0;
-  --ring: #1b4332;
+  --ring: #ff803e;
 
   --radius: 0.75rem;
 }

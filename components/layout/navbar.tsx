@@ -2,8 +2,9 @@
 
 import { useState, useEffect } from "react"
 import Link from "next/link"
+import Image from "next/image"
 import { usePathname } from "next/navigation"
-import { Menu, ChevronDown, Sun } from "lucide-react"
+import { Menu, ChevronDown } from "lucide-react"
 import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
 import {
@@ -58,18 +59,19 @@ export function Navbar({ locale, dict }: { locale: Locale; dict: Dictionary }) {
       <nav className="container-premium flex h-16 items-center justify-between gap-4 md:h-20">
         <Link
           href={withLocale(locale, "/")}
-          className="flex items-center gap-2 font-heading text-xl font-extrabold tracking-tight"
+          className="flex items-center"
           aria-label="Soleva"
         >
-          <span
-            className={cn(
-              "flex h-9 w-9 items-center justify-center rounded-full transition-colors",
-              scrolled ? "bg-primary text-primary-foreground" : "bg-primary text-primary-foreground",
-            )}
-          >
-            <Sun className="h-5 w-5" aria-hidden="true" />
+          <span className="flex items-center rounded-xl bg-[#0a0a0a] px-3 py-1.5">
+            <Image
+              src="/images/soleva-logo.webp"
+              alt="Soleva — The Solar Electric Van"
+              width={651}
+              height={281}
+              priority
+              className="h-8 w-auto md:h-9"
+            />
           </span>
-          <span className={cn(scrolled ? "text-foreground" : "text-foreground")}>Soleva</span>
         </Link>
 
         {/* Desktop nav */}
@@ -94,12 +96,12 @@ export function Navbar({ locale, dict }: { locale: Locale; dict: Dictionary }) {
           <DropdownMenu>
             <DropdownMenuTrigger
               render={
-                <Button variant="ghost" size="sm" className="gap-1 px-2" aria-label={dict.nav.language}>
-                  {localeShort[locale]}
-                  <ChevronDown className="h-4 w-4" aria-hidden="true" />
-                </Button>
+                <Button variant="ghost" size="sm" className="gap-1 px-2" aria-label={dict.nav.language} />
               }
-            />
+            >
+              {localeShort[locale]}
+              <ChevronDown className="h-4 w-4" aria-hidden="true" />
+            </DropdownMenuTrigger>
             <DropdownMenuContent align="end">
               {locales.map((l) => (
                 <DropdownMenuItem
@@ -108,11 +110,11 @@ export function Navbar({ locale, dict }: { locale: Locale; dict: Dictionary }) {
                     <Link
                       href={`/${l}${pathWithoutLocale === "/" ? "" : pathWithoutLocale}`}
                       className={cn("cursor-pointer", l === locale && "font-semibold text-primary")}
-                    >
-                      {localeNames[l]}
-                    </Link>
+                    />
                   }
-                />
+                >
+                  {localeNames[l]}
+                </DropdownMenuItem>
               ))}
             </DropdownMenuContent>
           </DropdownMenu>
@@ -120,18 +122,20 @@ export function Navbar({ locale, dict }: { locale: Locale; dict: Dictionary }) {
           <Button
             size="sm"
             className="hidden bg-primary text-primary-foreground hover:bg-primary/90 sm:inline-flex"
-            render={<Link href={withLocale(locale, "/contact")}>{dict.common.contact_us}</Link>}
-          />
+            render={<Link href={withLocale(locale, "/contact")} />}
+          >
+            {dict.common.contact_us}
+          </Button>
 
           {/* Mobile menu */}
           <Sheet open={open} onOpenChange={setOpen}>
             <SheetTrigger
               render={
-                <Button variant="ghost" size="icon" className="lg:hidden" aria-label={dict.nav.menu}>
-                  <Menu className="h-6 w-6" aria-hidden="true" />
-                </Button>
+                <Button variant="ghost" size="icon" className="lg:hidden" aria-label={dict.nav.menu} />
               }
-            />
+            >
+              <Menu className="h-6 w-6" aria-hidden="true" />
+            </SheetTrigger>
             <SheetContent side="right" className="w-[300px] p-0">
               <SheetTitle className="sr-only">{dict.nav.menu}</SheetTitle>
               <div className="flex flex-col gap-1 px-4 pt-16">
@@ -145,22 +149,22 @@ export function Navbar({ locale, dict }: { locale: Locale; dict: Dictionary }) {
                           "rounded-md px-3 py-3 text-base font-medium transition-colors hover:bg-muted",
                           isActive(item.href) ? "text-primary" : "text-foreground",
                         )}
-                      >
-                        {navLabel(item.key)}
-                      </Link>
+                      />
                     }
-                  />
+                  >
+                    {navLabel(item.key)}
+                  </SheetClose>
                 ))}
                 <SheetClose
                   render={
                     <Button
                       className="mt-4 bg-primary text-primary-foreground hover:bg-primary/90"
-                      render={
-                        <Link href={withLocale(locale, "/soutenir")}>{dict.common.support_project}</Link>
-                      }
+                      render={<Link href={withLocale(locale, "/soutenir")} />}
                     />
                   }
-                />
+                >
+                  {dict.common.support_project}
+                </SheetClose>
               </div>
             </SheetContent>
           </Sheet>

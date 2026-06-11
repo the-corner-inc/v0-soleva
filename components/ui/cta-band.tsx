@@ -26,13 +26,11 @@ export function CtaBand({
           <Button
             size="lg"
             className="mt-8 bg-secondary text-secondary-foreground hover:bg-secondary/90"
-            render={
-              <Link href={withLocale(locale, href)} className="inline-flex items-center gap-2">
-                {buttonLabel}
-                <ArrowRight className="h-4 w-4" aria-hidden="true" />
-              </Link>
-            }
-          />
+            render={<Link href={withLocale(locale, href)} className="inline-flex items-center gap-2" />}
+          >
+            {buttonLabel}
+            <ArrowRight className="h-4 w-4" aria-hidden="true" />
+          </Button>
         </div>
       </div>
     </section>
