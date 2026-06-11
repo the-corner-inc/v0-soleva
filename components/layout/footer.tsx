@@ -54,9 +54,15 @@ export function Footer({ locale, dict }: { locale: Locale; dict: Dictionary }) {
                 <Mail className="h-4 w-4" aria-hidden="true" />
                 {CONTACT.email}
               </a>
-              <span className="inline-flex items-center gap-2">
-                <MapPin className="h-4 w-4" aria-hidden="true" />
-                {CONTACT.address.city}, {CONTACT.address.country}
+              <a href={`tel:${CONTACT.phoneHref}`} className="inline-flex items-center gap-2 hover:text-secondary">
+                <Phone className="h-4 w-4" aria-hidden="true" />
+                {CONTACT.phone}
+              </a>
+              <span className="inline-flex items-start gap-2">
+                <MapPin className="mt-0.5 h-4 w-4 shrink-0" aria-hidden="true" />
+                <span>
+                  {CONTACT.address.street}, {CONTACT.address.zip} {CONTACT.address.city}, {CONTACT.address.country}
+                </span>
               </span>
             </div>
           </div>
