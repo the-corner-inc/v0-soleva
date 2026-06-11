@@ -334,5 +334,8 @@
     "title": "Cette route n'est pas encore sur notre carte solaire.",
     "subtitle": "Pas d'inquiétude — nous allons retrouver le chemin du soleil.",
     "button": "Retour à l'accueil"
+  },
+  "a11y": {
+    "skipToContent": "Aller au contenu principal"
   }
 }

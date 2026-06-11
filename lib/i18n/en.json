@@ -334,5 +334,8 @@
     "title": "This road isn't on our solar map yet.",
     "subtitle": "Don't worry — we'll find our way back to the sun.",
     "button": "Back to homepage"
+  },
+  "a11y": {
+    "skipToContent": "Skip to main content"
   }
 }

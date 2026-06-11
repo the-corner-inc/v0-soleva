@@ -1,0 +1,57 @@
+import Image from "next/image"
+import Link from "next/link"
+import { ArrowRight, Sun } from "lucide-react"
+import { type Locale } from "@/lib/i18n/config"
+import type { Dictionary } from "@/lib/i18n"
+import { withLocale } from "@/lib/navigation"
+import { Button } from "@/components/ui/button"
+import { IMAGES } from "@/lib/constants"
+
+export function HomeHero({ locale, dict }: { locale: Locale; dict: Dictionary }) {
+  return (
+    <section className="relative isolate overflow-hidden bg-dark text-dark-foreground">
+      <div className="absolute inset-0 -z-10">
+        <Image
+          src={IMAGES.hero || "/placeholder.svg"}
+          alt=""
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-dark/90 via-dark/70 to-dark/30" />
+      </div>
+
+      <div className="container-premium flex min-h-[92vh] flex-col justify-center py-32">
+        <div className="max-w-2xl">
+          <p className="inline-flex items-center gap-2 rounded-full border border-secondary/40 bg-secondary/10 px-4 py-1.5 text-sm font-medium text-secondary">
+            <Sun className="h-4 w-4" aria-hidden="true" />
+            {dict.home.hero.eyebrow}
+          </p>
+          <h1 className="mt-6 text-balance font-heading text-4xl font-extrabold leading-[1.05] sm:text-5xl lg:text-6xl">
+            {dict.home.hero.title}
+          </h1>
+          <p className="mt-6 max-w-xl text-lg leading-relaxed text-dark-foreground/80">
+            {dict.home.hero.subtitle}
+          </p>
+          <div className="mt-9 flex flex-col gap-3 sm:flex-row">
+            <Button asChild size="lg" className="bg-secondary text-secondary-foreground hover:bg-secondary/90">
+              <Link href={withLocale(locale, "/contact")} className="inline-flex items-center gap-2">
+                {dict.home.hero.primary_cta}
+                <ArrowRight className="h-4 w-4" aria-hidden="true" />
+              </Link>
+            </Button>
+            <Button
+              asChild
+              size="lg"
+              variant="outline"
+              className="border-dark-foreground/30 bg-transparent text-dark-foreground hover:bg-dark-foreground/10 hover:text-dark-foreground"
+            >
+              <Link href={withLocale(locale, "/le-van")}>{dict.home.hero.secondary_cta}</Link>
+            </Button>
+          </div>
+        </div>
+      </div>
+    </section>
+  )
+}

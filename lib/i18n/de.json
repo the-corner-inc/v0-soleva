@@ -334,5 +334,8 @@
     "title": "Diese Strasse ist noch nicht auf unserer Solarkarte.",
     "subtitle": "Keine Sorge — wir finden den Weg zurück zur Sonne.",
     "button": "Zurück zur Startseite"
+  },
+  "a11y": {
+    "skipToContent": "Zum Hauptinhalt springen"
   }
 }

@@ -334,5 +334,8 @@
     "title": "Questa strada non è ancora sulla nostra mappa solare.",
     "subtitle": "Niente paura — ritroveremo la strada verso il sole.",
     "button": "Torna alla home"
+  },
+  "a11y": {
+    "skipToContent": "Vai al contenuto principale"
   }
 }
