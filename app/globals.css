@@ -1,0 +1,108 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+@import 'shadcn/tailwind.css';
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --font-heading: var(--font-montserrat), 'Montserrat Fallback', sans-serif;
+  --font-sans: var(--font-montserrat), 'Montserrat Fallback', sans-serif;
+  --font-mono: var(--font-geist-mono), 'Geist Mono Fallback';
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-electric: var(--electric);
+  --color-electric-foreground: var(--electric-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-dark: var(--dark);
+  --color-dark-foreground: var(--dark-foreground);
+
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+  --radius-2xl: calc(var(--radius) * 1.8);
+  --radius-3xl: calc(var(--radius) * 2.2);
+}
+
+:root {
+  /* Deep forest green — sustainability, nature */
+  --primary: #1b4332;
+  --primary-foreground: #fefdf5;
+
+  /* Solar gold — energy, sun, warmth (decorative / on dark only) */
+  --secondary: #d4a017;
+  --secondary-foreground: #1a1a2e;
+
+  /* Electric blue — technology, EV, innovation */
+  --electric: #2563eb;
+  --electric-foreground: #ffffff;
+
+  /* Backgrounds */
+  --background: #ffffff;
+  --foreground: #2d3748;
+
+  --card: #ffffff;
+  --card-foreground: #2d3748;
+  --popover: #ffffff;
+  --popover-foreground: #2d3748;
+
+  /* Warm white / muted surfaces */
+  --muted: #f0f4e8;
+  --muted-foreground: #64748b;
+  --accent: #fefdf5;
+  --accent-foreground: #1b4332;
+
+  /* Deep anthracite — footer / dark sections */
+  --dark: #1a1a2e;
+  --dark-foreground: #fefdf5;
+
+  --destructive: #dc2626;
+  --border: #e2e8f0;
+  --input: #e2e8f0;
+  --ring: #1b4332;
+
+  --radius: 0.75rem;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  html {
+    @apply font-sans;
+    scroll-behavior: smooth;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-heading;
+  }
+}
+
+@utility container-premium {
+  @apply mx-auto max-w-7xl px-5 sm:px-8 lg:px-12;
+}
+
+@utility section-padding {
+  @apply py-20 md:py-28 lg:py-36;
+}
