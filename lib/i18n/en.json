@@ -208,7 +208,8 @@
       "volunteer_desc": "Join the team and contribute your skills, whether technical, creative or organizational.",
       "volunteer_cta": "Join the team",
       "share_title": "Share the project",
-      "share_desc": "Follow Soleva on social media and share the project around you to amplify its impact."
+      "share_desc": "Follow Soleva on social media and share the project around you to amplify its impact.",
+      "share_cta": "Share"
     },
     "crowdfunding": {
       "title": "A successful crowdfunding",

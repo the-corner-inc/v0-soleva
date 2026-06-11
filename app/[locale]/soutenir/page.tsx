@@ -13,6 +13,7 @@ import { Button } from "@/components/ui/button"
 import { CtaBand } from "@/components/ui/cta-band"
 import { Heart, Handshake, Users, Share2, ArrowRight } from "lucide-react"
 import { CopyIbanButton } from "@/components/ui/copy-iban-button"
+import { ShareButton } from "@/components/ui/share-button"
 
 export async function generateMetadata({
   params,
@@ -44,7 +45,7 @@ export default async function SupportPage({
     { icon: Heart, title: t.ways.donate_title, desc: t.ways.donate_desc, cta: t.ways.donate_cta, href: "#donation" },
     { icon: Handshake, title: t.ways.sponsor_title, desc: t.ways.sponsor_desc, cta: t.ways.sponsor_cta, href: "#sponsorship" },
     { icon: Users, title: t.ways.volunteer_title, desc: t.ways.volunteer_desc, cta: t.ways.volunteer_cta, href: "/contact" },
-    { icon: Share2, title: t.ways.share_title, desc: t.ways.share_desc, cta: null, href: null },
+    { icon: Share2, title: t.ways.share_title, desc: t.ways.share_desc, cta: t.ways.share_cta, href: null },
   ]
 
   const cf = t.crowdfunding
@@ -82,6 +83,8 @@ export default async function SupportPage({
                         {way.cta}
                         <ArrowRight className="h-4 w-4" aria-hidden="true" />
                       </Link>
+                    ) : way.cta ? (
+                      <ShareButton label={way.cta} />
                     ) : null}
                   </article>
                 </Reveal>
@@ -92,7 +95,7 @@ export default async function SupportPage({
       </section>
 
       {/* Sponsoring Tiers */}
-      <section className="bg-background">
+      <section id="sponsorship" className="bg-background">
         <div className="container-premium section-padding">
           <SectionHeading title={t.sponsor_tiers_title} subtitle={t.sponsor_tiers_subtitle} />
           <div className="mx-auto mt-10 grid max-w-5xl gap-6 md:grid-cols-3">
