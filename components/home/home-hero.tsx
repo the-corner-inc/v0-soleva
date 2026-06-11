@@ -35,20 +35,22 @@ export function HomeHero({ locale, dict }: { locale: Locale; dict: Dictionary })
             {dict.home.hero.subtitle}
           </p>
           <div className="mt-9 flex flex-col gap-3 sm:flex-row">
-            <Button asChild size="lg" className="bg-secondary text-secondary-foreground hover:bg-secondary/90">
-              <Link href={withLocale(locale, "/contact")} className="inline-flex items-center gap-2">
-                {dict.home.hero.primary_cta}
-                <ArrowRight className="h-4 w-4" aria-hidden="true" />
-              </Link>
-            </Button>
             <Button
-              asChild
+              size="lg"
+              className="bg-secondary text-secondary-foreground hover:bg-secondary/90"
+              render={
+                <Link href={withLocale(locale, "/contact")} className="inline-flex items-center gap-2">
+                  {dict.home.hero.primary_cta}
+                  <ArrowRight className="h-4 w-4" aria-hidden="true" />
+                </Link>
+              }
+            />
+            <Button
               size="lg"
               variant="outline"
               className="border-dark-foreground/30 bg-transparent text-dark-foreground hover:bg-dark-foreground/10 hover:text-dark-foreground"
-            >
-              <Link href={withLocale(locale, "/le-van")}>{dict.home.hero.secondary_cta}</Link>
-            </Button>
+              render={<Link href={withLocale(locale, "/le-van")}>{dict.home.hero.secondary_cta}</Link>}
+            />
           </div>
         </div>
       </div>

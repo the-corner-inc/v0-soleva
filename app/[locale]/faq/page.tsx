@@ -65,9 +65,11 @@ export default async function FaqPage({
           <div className="mx-auto flex max-w-2xl flex-col items-center text-center">
             <h2 className="font-heading text-2xl font-bold sm:text-3xl">{fq.cta.title}</h2>
             <p className="mt-3 leading-relaxed text-muted-foreground">{fq.cta.body}</p>
-            <Button asChild size="lg" className="mt-6">
-              <Link href={withLocale(l, "/contact")}>{fq.cta.button}</Link>
-            </Button>
+            <Button
+              size="lg"
+              className="mt-6"
+              render={<Link href={withLocale(l, "/contact")}>{fq.cta.button}</Link>}
+            />
           </div>
         </div>
       </section>

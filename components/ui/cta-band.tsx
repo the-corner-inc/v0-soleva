@@ -24,15 +24,15 @@ export function CtaBand({
           <h2 className="text-balance font-heading text-3xl font-extrabold leading-tight sm:text-4xl">{title}</h2>
           <p className="mt-4 text-lg leading-relaxed text-primary-foreground/80">{body}</p>
           <Button
-            asChild
             size="lg"
             className="mt-8 bg-secondary text-secondary-foreground hover:bg-secondary/90"
-          >
-            <Link href={withLocale(locale, href)} className="inline-flex items-center gap-2">
-              {buttonLabel}
-              <ArrowRight className="h-4 w-4" aria-hidden="true" />
-            </Link>
-          </Button>
+            render={
+              <Link href={withLocale(locale, href)} className="inline-flex items-center gap-2">
+                {buttonLabel}
+                <ArrowRight className="h-4 w-4" aria-hidden="true" />
+              </Link>
+            }
+          />
         </div>
       </div>
     </section>

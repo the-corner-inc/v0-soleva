@@ -44,7 +44,7 @@ export function FaqList({
         ))}
       </div>
 
-      <Accordion type="single" collapsible className="mt-8 flex flex-col gap-3">
+      <Accordion className="mt-8 flex flex-col gap-3">
         {visible.map((faq, i) => (
           <AccordionItem
             key={`${active}-${i}`}

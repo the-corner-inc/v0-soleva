@@ -92,58 +92,75 @@ export function Navbar({ locale, dict }: { locale: Locale; dict: Dictionary }) {
         <div className="flex items-center gap-2">
           {/* Language switcher */}
           <DropdownMenu>
-            <DropdownMenuTrigger asChild>
-              <Button variant="ghost" size="sm" className="gap-1 px-2" aria-label={dict.nav.language}>
-                {localeShort[locale]}
-                <ChevronDown className="h-4 w-4" aria-hidden="true" />
-              </Button>
-            </DropdownMenuTrigger>
+            <DropdownMenuTrigger
+              render={
+                <Button variant="ghost" size="sm" className="gap-1 px-2" aria-label={dict.nav.language}>
+                  {localeShort[locale]}
+                  <ChevronDown className="h-4 w-4" aria-hidden="true" />
+                </Button>
+              }
+            />
             <DropdownMenuContent align="end">
               {locales.map((l) => (
-                <DropdownMenuItem key={l} asChild>
-                  <Link
-                    href={`/${l}${pathWithoutLocale === "/" ? "" : pathWithoutLocale}`}
-                    className={cn("cursor-pointer", l === locale && "font-semibold text-primary")}
-                  >
-                    {localeNames[l]}
-                  </Link>
-                </DropdownMenuItem>
+                <DropdownMenuItem
+                  key={l}
+                  render={
+                    <Link
+                      href={`/${l}${pathWithoutLocale === "/" ? "" : pathWithoutLocale}`}
+                      className={cn("cursor-pointer", l === locale && "font-semibold text-primary")}
+                    >
+                      {localeNames[l]}
+                    </Link>
+                  }
+                />
               ))}
             </DropdownMenuContent>
           </DropdownMenu>
 
-          <Button asChild size="sm" className="hidden bg-primary text-primary-foreground hover:bg-primary/90 sm:inline-flex">
-            <Link href={withLocale(locale, "/contact")}>{dict.common.contact_us}</Link>
-          </Button>
+          <Button
+            size="sm"
+            className="hidden bg-primary text-primary-foreground hover:bg-primary/90 sm:inline-flex"
+            render={<Link href={withLocale(locale, "/contact")}>{dict.common.contact_us}</Link>}
+          />
 
           {/* Mobile menu */}
           <Sheet open={open} onOpenChange={setOpen}>
-            <SheetTrigger asChild>
-              <Button variant="ghost" size="icon" className="lg:hidden" aria-label={dict.nav.menu}>
-                <Menu className="h-6 w-6" aria-hidden="true" />
-              </Button>
-            </SheetTrigger>
+            <SheetTrigger
+              render={
+                <Button variant="ghost" size="icon" className="lg:hidden" aria-label={dict.nav.menu}>
+                  <Menu className="h-6 w-6" aria-hidden="true" />
+                </Button>
+              }
+            />
             <SheetContent side="right" className="w-[300px] p-0">
               <SheetTitle className="sr-only">{dict.nav.menu}</SheetTitle>
               <div className="flex flex-col gap-1 px-4 pt-16">
                 {mainNav.map((item) => (
-                  <SheetClose asChild key={item.key}>
-                    <Link
-                      href={withLocale(locale, item.href)}
-                      className={cn(
-                        "rounded-md px-3 py-3 text-base font-medium transition-colors hover:bg-muted",
-                        isActive(item.href) ? "text-primary" : "text-foreground",
-                      )}
-                    >
-                      {navLabel(item.key)}
-                    </Link>
-                  </SheetClose>
+                  <SheetClose
+                    key={item.key}
+                    render={
+                      <Link
+                        href={withLocale(locale, item.href)}
+                        className={cn(
+                          "rounded-md px-3 py-3 text-base font-medium transition-colors hover:bg-muted",
+                          isActive(item.href) ? "text-primary" : "text-foreground",
+                        )}
+                      >
+                        {navLabel(item.key)}
+                      </Link>
+                    }
+                  />
                 ))}
-                <SheetClose asChild>
-                  <Button asChild className="mt-4 bg-primary text-primary-foreground hover:bg-primary/90">
-                    <Link href={withLocale(locale, "/soutenir")}>{dict.common.support_project}</Link>
-                  </Button>
-                </SheetClose>
+                <SheetClose
+                  render={
+                    <Button
+                      className="mt-4 bg-primary text-primary-foreground hover:bg-primary/90"
+                      render={
+                        <Link href={withLocale(locale, "/soutenir")}>{dict.common.support_project}</Link>
+                      }
+                    />
+                  }
+                />
               </div>
             </SheetContent>
           </Sheet>
