@@ -262,33 +262,12 @@
     "hero": {
       "eyebrow": "Contatto",
       "title": "Contattaci",
-      "subtitle": "Una domanda, un'idea, una proposta di partnership o un invito a un evento? Scrivici tramite il modulo o direttamente a info@soleva.org."
+      "subtitle": "Una domanda, un'idea, una proposta di partnership o un invito a un evento? Scrivici direttamente a info@soleva.org."
     },
-    "form": {
-      "first_name": "Nome",
-      "last_name": "Cognome",
-      "organization": "Organizzazione",
-      "organization_optional": "(facoltativo)",
-      "email": "Email",
-      "inquiry_type": "Tipo di richiesta",
-      "message": "Messaggio",
-      "consent": "Accetto che i miei dati siano utilizzati per gestire la mia richiesta, in conformità con l'informativa sulla privacy.",
-      "submit": "Invia",
-      "sending": "Invio in corso…",
-      "success": "Grazie! Il tuo messaggio è stato inviato. Ti risponderemo a breve.",
-      "error": "Si è verificato un errore. Riprova o scrivi direttamente a info@soleva.org.",
-      "required": "Questo campo è obbligatorio.",
-      "invalid_email": "Indirizzo email non valido.",
-      "types": {
-        "sponsoring": "Sponsorizzazione",
-        "event": "Invito a un evento",
-        "media": "Media / Stampa",
-        "school": "Scuola / Educazione",
-        "volunteering": "Volontariato",
-        "donation": "Donazione",
-        "partnership": "Partnership",
-        "other": "Altro"
-      }
+    "emailCTA": {
+      "title": "Contattaci via email",
+      "description": "Scrivici direttamente tramite la tua app email. Un clic apre il tuo client email con il nostro indirizzo pre-compilato.",
+      "button": "Apri email"
     },
     "info": {
       "title": "Contatti",
@@ -332,7 +311,7 @@
     "title": "Informativa sulla privacy",
     "intro": "Questa informativa descrive come Soleva tratta i tuoi dati personali, in conformità con la LPD svizzera e il GDPR europeo.",
     "data_title": "Dati raccolti",
-    "data_body": "I dati inviati tramite il modulo di contatto (nome, email, organizzazione, messaggio) sono utilizzati esclusivamente per rispondere alla tua richiesta.",
+    "data_body": "I dati scambiati via email (nome, email, organizzazione, messaggio) sono utilizzati esclusivamente per rispondere alla tua richiesta.",
     "analytics_title": "Misurazione del pubblico",
     "analytics_body": "Utilizziamo Google Analytics 4 in modalità consenso. Nessun dato di analisi viene raccolto prima del tuo consenso esplicito.",
     "cookies_title": "Cookie",

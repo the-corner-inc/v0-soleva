@@ -170,10 +170,10 @@ export const faqs: FAQ[] = [
       it: "Posso invitare Soleva a un evento?",
     },
     answer: {
-      fr: "Oui, contactez l'équipe via le formulaire ou à info@soleva.org.",
-      en: "Yes, contact the team via the form or at info@soleva.org.",
-      de: "Ja, kontaktieren Sie das Team über das Formular oder unter info@soleva.org.",
-      it: "Sì, contatta il team tramite il modulo o all'indirizzo info@soleva.org.",
+      fr: "Oui, contactez l'équipe par email à info@soleva.org.",
+      en: "Yes, contact the team by email at info@soleva.org.",
+      de: "Ja, kontaktieren Sie das Team per E-Mail unter info@soleva.org.",
+      it: "Sì, contatta il team via email all'indirizzo info@soleva.org.",
     },
   },
   {
@@ -245,10 +245,10 @@ export const faqs: FAQ[] = [
       it: "Come vengono trattati i miei dati?",
     },
     answer: {
-      fr: "Les données soumises via le formulaire de contact servent uniquement à répondre à votre demande. Voir notre politique de confidentialité.",
-      en: "Data submitted via the contact form is used solely to respond to your inquiry. See our privacy policy for details.",
-      de: "Die über das Kontaktformular übermittelten Daten dienen ausschliesslich der Beantwortung Ihrer Anfrage. Siehe unsere Datenschutzerklärung.",
-      it: "I dati inviati tramite il modulo di contatto servono esclusivamente a rispondere alla tua richiesta. Consulta la nostra informativa sulla privacy.",
+      fr: "Les données échangées par email servent uniquement à répondre à votre demande. Voir notre politique de confidentialité.",
+      en: "Data exchanged via email is used solely to respond to your inquiry. See our privacy policy for details.",
+      de: "Die per E-Mail ausgetauschten Daten dienen ausschliesslich der Beantwortung Ihrer Anfrage. Siehe unsere Datenschutzerklärung.",
+      it: "I dati scambiati via email servono esclusivamente a rispondere alla tua richiesta. Consulta la nostra informativa sulla privacy.",
     },
   },
 ]

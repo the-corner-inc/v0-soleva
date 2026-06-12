@@ -262,33 +262,12 @@
     "hero": {
       "eyebrow": "Contact",
       "title": "Contact us",
-      "subtitle": "A question, an idea, a partnership proposal or an event invitation? Write to us through the form or directly at info@soleva.org."
+      "subtitle": "A question, an idea, a partnership proposal or an event invitation? Write to us directly at info@soleva.org."
     },
-    "form": {
-      "first_name": "First name",
-      "last_name": "Last name",
-      "organization": "Organization",
-      "organization_optional": "(optional)",
-      "email": "Email",
-      "inquiry_type": "Type of inquiry",
-      "message": "Message",
-      "consent": "I agree that my data may be used to handle my request, in accordance with the privacy policy.",
-      "submit": "Send",
-      "sending": "Sending…",
-      "success": "Thank you! Your message has been sent. We will reply shortly.",
-      "error": "Something went wrong. Please try again or write directly to info@soleva.org.",
-      "required": "This field is required.",
-      "invalid_email": "Invalid email address.",
-      "types": {
-        "sponsoring": "Sponsoring",
-        "event": "Event invitation",
-        "media": "Media / Press",
-        "school": "School / Education",
-        "volunteering": "Volunteering",
-        "donation": "Donation",
-        "partnership": "Partnership",
-        "other": "Other"
-      }
+    "emailCTA": {
+      "title": "Contact us by email",
+      "description": "Write to us directly via your email app. One click opens your email client with our address pre-filled.",
+      "button": "Open email"
     },
     "info": {
       "title": "Contact details",
@@ -332,7 +311,7 @@
     "title": "Privacy policy",
     "intro": "This policy describes how Soleva handles your personal data, in accordance with the Swiss FADP and the European GDPR.",
     "data_title": "Data collected",
-    "data_body": "Data submitted via the contact form (name, email, organization, message) is used solely to respond to your request.",
+    "data_body": "Data exchanged via email (name, email, organization, message) is used solely to respond to your request.",
     "analytics_title": "Audience measurement",
     "analytics_body": "We use Google Analytics 4 in consent mode. No analytics data is collected before your explicit consent.",
     "cookies_title": "Cookies",

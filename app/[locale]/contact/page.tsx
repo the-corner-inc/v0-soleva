@@ -4,9 +4,10 @@ import { getDictionary } from "@/lib/i18n"
 import { notFound } from "next/navigation"
 import { SITE_URL, CONTACT } from "@/lib/constants"
 import { PageHero } from "@/components/layout/page-hero"
-import { ContactForm } from "@/components/contact/contact-form"
 import { Mail, MapPin, Share2 } from "lucide-react"
 import { SOCIALS } from "@/lib/constants"
+import { buttonVariants } from "@/components/ui/button"
+import { cn } from "@/lib/utils"
 
 export async function generateMetadata({
   params,
@@ -48,8 +49,27 @@ export default async function ContactPage({
       <section className="bg-background">
         <div className="container-premium section-padding">
           <div className="grid gap-12 lg:grid-cols-[1fr_22rem] lg:gap-16">
-            <div className="rounded-3xl border border-border bg-card p-8 md:p-10">
-              <ContactForm dict={dict} />
+            <div className="flex flex-col items-center justify-center rounded-3xl border border-border bg-card p-10 text-center">
+              <span className="flex h-14 w-14 items-center justify-center rounded-full bg-primary/10 text-primary">
+                <Mail className="h-7 w-7" />
+              </span>
+              <h2 className="mt-5 font-heading text-2xl font-bold text-foreground">{t.emailCTA.title}</h2>
+              <p className="mt-3 max-w-md text-muted-foreground">
+                {t.emailCTA.description}
+              </p>
+              <a
+                href={`mailto:${CONTACT.email}`}
+                className={cn(
+                  buttonVariants({ size: "lg" }),
+                  "mt-6 gap-2"
+                )}
+              >
+                <Mail className="h-5 w-5" />
+                {t.emailCTA.button}
+              </a>
+              <p className="mt-4 text-sm text-muted-foreground">
+                {CONTACT.email}
+              </p>
             </div>
 
             <aside className="flex flex-col gap-8">

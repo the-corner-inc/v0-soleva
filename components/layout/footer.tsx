@@ -6,7 +6,6 @@ import type { Dictionary } from "@/lib/i18n"
 import { withLocale } from "@/lib/navigation"
 import { CONTACT, SOCIALS, SITE_NAME, THE_CORNER } from "@/lib/constants"
 import { ManageCookiesButton } from "@/components/layout/cookie-banner"
-import { NewsletterForm } from "@/components/layout/newsletter-form"
 import { InstagramIcon, FacebookIcon, LinkedinIcon, YoutubeIcon } from "@/components/ui/social-icons"
 
 export function Footer({ locale, dict }: { locale: Locale; dict: Dictionary }) {
@@ -104,7 +103,6 @@ export function Footer({ locale, dict }: { locale: Locale; dict: Dictionary }) {
                 <ManageCookiesButton label={dict.footer.manage_cookies} />
               </li>
             </ul>
-            <NewsletterForm dict={dict} />
           </div>
         </div>
 

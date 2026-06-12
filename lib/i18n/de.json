@@ -262,33 +262,12 @@
     "hero": {
       "eyebrow": "Kontakt",
       "title": "Kontaktieren Sie uns",
-      "subtitle": "Eine Frage, eine Idee, ein Partnerschaftsvorschlag oder eine Event-Einladung? Schreiben Sie uns über das Formular oder direkt an info@soleva.org."
+      "subtitle": "Eine Frage, eine Idee, ein Partnerschaftsvorschlag oder eine Event-Einladung? Schreiben Sie uns direkt an info@soleva.org."
     },
-    "form": {
-      "first_name": "Vorname",
-      "last_name": "Name",
-      "organization": "Organisation",
-      "organization_optional": "(optional)",
-      "email": "E-Mail",
-      "inquiry_type": "Art der Anfrage",
-      "message": "Nachricht",
-      "consent": "Ich bin damit einverstanden, dass meine Daten zur Bearbeitung meiner Anfrage gemäss der Datenschutzerklärung verwendet werden.",
-      "submit": "Senden",
-      "sending": "Wird gesendet…",
-      "success": "Danke! Ihre Nachricht wurde gesendet. Wir antworten Ihnen in Kürze.",
-      "error": "Ein Fehler ist aufgetreten. Bitte versuchen Sie es erneut oder schreiben Sie direkt an info@soleva.org.",
-      "required": "Dieses Feld ist erforderlich.",
-      "invalid_email": "Ungültige E-Mail-Adresse.",
-      "types": {
-        "sponsoring": "Sponsoring",
-        "event": "Event-Einladung",
-        "media": "Medien / Presse",
-        "school": "Schule / Bildung",
-        "volunteering": "Freiwilligenarbeit",
-        "donation": "Spende",
-        "partnership": "Partnerschaft",
-        "other": "Sonstiges"
-      }
+    "emailCTA": {
+      "title": "Kontaktieren Sie uns per E-Mail",
+      "description": "Schreiben Sie uns direkt über Ihre E-Mail-App. Ein Klick öffnet Ihr E-Mail-Programm mit unserer vorausgefüllten Adresse.",
+      "button": "E-Mail öffnen"
     },
     "info": {
       "title": "Kontaktdaten",
@@ -332,7 +311,7 @@
     "title": "Datenschutzerklärung",
     "intro": "Diese Erklärung beschreibt, wie Soleva mit Ihren persönlichen Daten umgeht, gemäss dem Schweizer DSG und der europäischen DSGVO.",
     "data_title": "Erhobene Daten",
-    "data_body": "Die über das Kontaktformular übermittelten Daten (Name, E-Mail, Organisation, Nachricht) werden ausschliesslich zur Beantwortung Ihrer Anfrage verwendet.",
+    "data_body": "Die per E-Mail ausgetauschten Daten (Name, E-Mail, Organisation, Nachricht) werden ausschliesslich zur Beantwortung Ihrer Anfrage verwendet.",
     "analytics_title": "Reichweitenmessung",
     "analytics_body": "Wir verwenden Google Analytics 4 im Consent-Modus. Vor Ihrer ausdrücklichen Zustimmung werden keine Analysedaten erhoben.",
     "cookies_title": "Cookies",
