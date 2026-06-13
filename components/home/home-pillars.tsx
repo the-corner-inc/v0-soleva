@@ -28,7 +28,7 @@ export function HomePillars({ locale, dict }: { locale: Locale; dict: Dictionary
       Icon: Home,
       title: dict.home.pillars.habitat_title,
       desc: dict.home.pillars.habitat_desc,
-      href: "/le-van/habitat",
+      href: "/habitat",
       image: IMAGES.habitat,
     },
   ]

@@ -5,9 +5,10 @@ import type { Metadata } from "next"
 import { ArrowRight } from "lucide-react"
 import { type Locale, isLocale } from "@/lib/i18n/config"
 import { getDictionary } from "@/lib/i18n"
-import { SITE_URL } from "@/lib/constants"
+import { SITE_URL, IMAGES } from "@/lib/constants"
 import { withLocale } from "@/lib/navigation"
 import { services } from "@/lib/data/services"
+import { habitatContent } from "@/lib/data/habitat"
 import { PageHero } from "@/components/layout/page-hero"
 import { Reveal } from "@/components/ui/reveal"
 import { CtaBand } from "@/components/ui/cta-band"
@@ -96,6 +97,39 @@ export default async function VanPage({
               )
             })}
           </div>
+        </div>
+      </section>
+
+      {/* Habitat feature banner */}
+      <section className="bg-accent">
+        <div className="container-premium section-padding">
+          <Reveal>
+            <Link
+              href={withLocale(l, "/habitat")}
+              className="group grid items-stretch overflow-hidden rounded-3xl border border-border bg-card shadow-sm transition-all hover:-translate-y-1 hover:shadow-lg lg:grid-cols-2"
+            >
+              <div className="relative aspect-[16/10] overflow-hidden lg:aspect-auto">
+                <Image
+                  src={IMAGES.habitatHero || "/placeholder.svg"}
+                  alt=""
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  className="object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+              </div>
+              <div className="flex flex-col justify-center p-8 sm:p-10">
+                <span className="text-sm font-semibold uppercase tracking-wider text-secondary">
+                  {habitatContent[l].hero.eyebrow}
+                </span>
+                <h2 className="mt-3 font-heading text-2xl font-bold sm:text-3xl">{habitatContent[l].hero.title}</h2>
+                <p className="mt-4 leading-relaxed text-muted-foreground">{habitatContent[l].hero.subtitle}</p>
+                <span className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-primary">
+                  {dict.common.learn_more}
+                  <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" aria-hidden="true" />
+                </span>
+              </div>
+            </Link>
+          </Reveal>
         </div>
       </section>
 
