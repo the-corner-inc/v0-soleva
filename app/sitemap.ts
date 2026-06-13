@@ -6,6 +6,7 @@ import { services } from "@/lib/data/services"
 const staticPaths = [
   "",
   "/le-van",
+  "/habitat",
   "/a-propos",
   "/impact",
   "/voyage",

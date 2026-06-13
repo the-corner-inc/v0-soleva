@@ -9,6 +9,7 @@ export type NavItem = {
 export const mainNav: NavItem[] = [
   { key: "home", href: "/" },
   { key: "van", href: "/le-van" },
+  { key: "habitat", href: "/habitat" },
   { key: "about", href: "/a-propos" },
   { key: "impact", href: "/impact" },
   { key: "voyage", href: "/voyage" },

@@ -60,6 +60,10 @@ export const IMAGES = {
   solarPanels: `${CDN}/b3b39fd6338afdf093d627f0bda0414de11bc57547733870aa031a6f55c4a5d3-253538.webp`,
   conversion: `${CDN}/0c25eb235de11ea7ea6882a92a1be45af9792b5b06364fef9f67bd3ce479abdc-253506.webp`,
   habitat: `${CDN}/bc751116783ee39eaa53d9cf322d39d9aa4b83d2dcea8846b58d214ddd987f7d-253525.webp`,
+  // Habitat page — authentic Soleva photography scraped from soleva.org/fr/habitat
+  habitatHero: `${CDN}/898d61cbe305b72fe571dfb0c04a518937eb0336ed9dae191dad6d87339a439e-218430.webp`, // "Slide habitat" — wide lifestyle shot
+  habitatInterior: `${CDN}/a11d3c70db24714d9c22e0eaa6617cd7520e15d4e136782c4df4ce42e07995f3-211108.webp`, // interior living space
+  habitatFeatures: `${CDN}/487b8f2c1b90b50be87695357ac21b616c60b2c19866629916cef0464ef3b851-114045.webp`, // recycled habitat features cutaway
   team: `${CDN}/a9b7ac5c4c9475c0a2ce9777901af80b920edd004c0233860556949860063a10-253524.webp`,
   workshop: `${CDN}/e1b7ba6455ef46728af5ef2edc5e77708387b64b6341d4ecdb9f85fafe1cc5c5-253532.webp`,
   journey: `${CDN}/9e0680890378ac823246e9b28d3644ec219d580eddda979567bd90f49a8c3ca9-253536.webp`,
