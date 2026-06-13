@@ -1,7 +1,7 @@
-import type { MetadataRoute } from "next"
 import { SITE_URL } from "@/lib/constants"
-import { locales } from "@/lib/i18n/config"
 import { services } from "@/lib/data/services"
+import { locales } from "@/lib/i18n/config"
+import type { MetadataRoute } from "next"
 
 const staticPaths = [
   "",

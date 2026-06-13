@@ -78,23 +78,70 @@ export function Navbar({ locale, dict }: { locale: Locale; dict: Dictionary }) {
 
         {/* Desktop nav */}
         <ul className="hidden items-center gap-1 lg:flex">
-          {mainNav.map((item) => (
-            <li key={item.key}>
-              <Link
-                href={withLocale(locale, item.href)}
-                className={cn(
-                  "rounded-md px-3 py-2 text-sm font-medium transition-colors",
-                  isActive(item.href)
-                    ? "text-primary"
-                    : onLight
-                      ? "text-foreground/80 hover:text-primary"
-                      : "text-white/85 hover:text-white",
-                )}
-              >
-                {navLabel(item.key)}
-              </Link>
-            </li>
-          ))}
+          {mainNav.map((item) => {
+            const parentActive = isActive(item.href) || item.children?.some((c) => isActive(c.href))
+
+            if (item.children) {
+              return (
+                <li key={item.key} className="group relative">
+                  <Link
+                    href={withLocale(locale, item.href)}
+                    className={cn(
+                      "inline-flex items-center gap-1 rounded-md px-3 py-2 text-sm font-medium transition-colors",
+                      parentActive
+                        ? "text-primary"
+                        : onLight
+                          ? "text-foreground/80 hover:text-primary"
+                          : "text-white/85 hover:text-white",
+                    )}
+                  >
+                    {navLabel(item.key)}
+                    <ChevronDown
+                      className="h-4 w-4 transition-transform duration-200 group-hover:rotate-180"
+                      aria-hidden="true"
+                    />
+                  </Link>
+                  <div className="invisible absolute left-0 top-full z-50 min-w-60 translate-y-1 pt-2 opacity-0 transition-all duration-200 group-hover:visible group-hover:translate-y-0 group-hover:opacity-100 group-focus-within:visible group-focus-within:translate-y-0 group-focus-within:opacity-100">
+                    <ul className="flex flex-col gap-0.5 rounded-xl border border-border bg-background p-2 shadow-lg">
+                      {item.children.map((child) => (
+                        <li key={child.key}>
+                          <Link
+                            href={withLocale(locale, child.href)}
+                            className={cn(
+                              "block rounded-md px-3 py-2 text-sm font-medium transition-colors",
+                              isActive(child.href)
+                                ? "bg-muted text-primary"
+                                : "text-foreground/80 hover:bg-muted hover:text-primary",
+                            )}
+                          >
+                            {navLabel(child.key)}
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </li>
+              )
+            }
+
+            return (
+              <li key={item.key}>
+                <Link
+                  href={withLocale(locale, item.href)}
+                  className={cn(
+                    "rounded-md px-3 py-2 text-sm font-medium transition-colors",
+                    parentActive
+                      ? "text-primary"
+                      : onLight
+                        ? "text-foreground/80 hover:text-primary"
+                        : "text-white/85 hover:text-white",
+                  )}
+                >
+                  {navLabel(item.key)}
+                </Link>
+              </li>
+            )
+          })}
         </ul>
 
         <div className="flex items-center gap-2">
@@ -164,20 +211,41 @@ export function Navbar({ locale, dict }: { locale: Locale; dict: Dictionary }) {
               <SheetTitle className="sr-only">{dict.nav.menu}</SheetTitle>
               <div className="flex flex-col gap-1 px-4 pt-16">
                 {mainNav.map((item) => (
-                  <SheetClose
-                    key={item.key}
-                    render={
-                      <Link
-                        href={withLocale(locale, item.href)}
-                        className={cn(
-                          "rounded-md px-3 py-3 text-base font-medium transition-colors hover:bg-muted",
-                          isActive(item.href) ? "text-primary" : "text-foreground",
-                        )}
-                      />
-                    }
-                  >
-                    {navLabel(item.key)}
-                  </SheetClose>
+                  <div key={item.key} className="flex flex-col">
+                    <SheetClose
+                      render={
+                        <Link
+                          href={withLocale(locale, item.href)}
+                          className={cn(
+                            "rounded-md px-3 py-3 text-base font-medium transition-colors hover:bg-muted",
+                            isActive(item.href) ? "text-primary" : "text-foreground",
+                          )}
+                        />
+                      }
+                    >
+                      {navLabel(item.key)}
+                    </SheetClose>
+                    {item.children && (
+                      <div className="ml-3 flex flex-col gap-0.5 border-l border-border pl-3">
+                        {item.children.map((child) => (
+                          <SheetClose
+                            key={child.key}
+                            render={
+                              <Link
+                                href={withLocale(locale, child.href)}
+                                className={cn(
+                                  "rounded-md px-3 py-2 text-sm font-medium transition-colors hover:bg-muted",
+                                  isActive(child.href) ? "text-primary" : "text-foreground/80",
+                                )}
+                              />
+                            }
+                          >
+                            {navLabel(child.key)}
+                          </SheetClose>
+                        ))}
+                      </div>
+                    )}
+                  </div>
                 ))}
                 <SheetClose
                   render={
