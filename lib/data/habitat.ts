@@ -1,19 +1,19 @@
+import { IMAGES } from "@/lib/constants"
+import type { Locale } from "@/lib/i18n/config"
 import {
   BedDouble,
-  ShowerHead,
   CookingPot,
-  Sofa,
-  Recycle,
-  Sun,
-  Route,
-  Leaf,
-  Wrench,
-  Gauge,
   Flame,
+  Gauge,
+  Leaf,
+  Recycle,
+  Route,
+  ShowerHead,
+  Sofa,
+  Sun,
+  Wrench,
   type LucideIcon,
 } from "lucide-react"
-import type { Locale } from "@/lib/i18n/config"
-import { IMAGES } from "@/lib/constants"
 
 export interface HabitatPoint {
   icon: LucideIcon

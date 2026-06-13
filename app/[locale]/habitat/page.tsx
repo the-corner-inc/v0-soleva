@@ -1,17 +1,16 @@
-import Image from "next/image"
-import { notFound } from "next/navigation"
-import type { Metadata } from "next"
-import { ArrowUpRight, Check } from "lucide-react"
-import { type Locale, isLocale, locales } from "@/lib/i18n/config"
-import { getDictionary } from "@/lib/i18n"
-import { SITE_URL, IMAGES, KEY_FIGURES } from "@/lib/constants"
-import { habitatContent, habitatSeoKeywords } from "@/lib/data/habitat"
+import { HabitatHero } from "@/components/habitat/habitat-hero"
+import { Breadcrumb } from "@/components/layout/breadcrumb"
+import { FaqJsonLd } from "@/components/seo/json-ld"
 import { Reveal } from "@/components/ui/reveal"
 import { SectionHeading } from "@/components/ui/section-heading"
-import { FaqJsonLd } from "@/components/seo/json-ld"
-import { Breadcrumb } from "@/components/layout/breadcrumb"
-import { HabitatHero } from "@/components/habitat/habitat-hero"
-import { HabitatLiving } from "@/components/habitat/habitat-living"
+import { IMAGES, KEY_FIGURES, SITE_URL } from "@/lib/constants"
+import { habitatContent, habitatSeoKeywords } from "@/lib/data/habitat"
+import { getDictionary } from "@/lib/i18n"
+import { type Locale, isLocale, locales } from "@/lib/i18n/config"
+import { ArrowUpRight, Check } from "lucide-react"
+import type { Metadata } from "next"
+import Image from "next/image"
+import { notFound } from "next/navigation"
 
 const SUPPORT_URL = KEY_FIGURES.crowdfundingUrl
 const DISCOVER_URL = SITE_URL
@@ -101,9 +100,6 @@ export default async function HabitatPage({
         </div>
       </section>
 
-      {/* Living spaces */}
-      <HabitatLiving living={c.living} />
-
       {/* Sustainability */}
       <section className="bg-dark text-dark-foreground">
         <div className="container-premium section-padding">
@@ -115,7 +111,7 @@ export default async function HabitatPage({
                     src={IMAGES.habitatFeatures}
                     alt={c.sustainability.imageCaption}
                     fill
-                    sizes="(max-width: 1024px) 100vw, 50vw"
+                    sizes="(max-width: 1024px) 100vw, 50vw "
                     className="object-cover"
                   />
                 </div>
