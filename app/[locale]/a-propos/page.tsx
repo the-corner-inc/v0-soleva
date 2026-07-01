@@ -5,10 +5,10 @@ import { Target, Eye, Sparkles } from "lucide-react"
 import { type Locale, isLocale } from "@/lib/i18n/config"
 import { getDictionary } from "@/lib/i18n"
 import { SITE_URL, IMAGES, TEAM_PHOTOS, MENTOR_PHOTOS, PRESS_LOGOS } from "@/lib/constants"
-import { milestones } from "@/lib/data/milestones"
 import { PageHero } from "@/components/layout/page-hero"
 import { Reveal } from "@/components/ui/reveal"
 import { CtaBand } from "@/components/ui/cta-band"
+import { Lightbox } from "@/components/ui/lightbox"
 
 export async function generateMetadata({
   params,
@@ -79,9 +79,11 @@ export default async function AboutPage({
         <div className="container-premium section-padding">
           <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
             <Reveal>
-              <div className="relative aspect-[4/3] overflow-hidden rounded-3xl">
-                <Image src={IMAGES.workshop || "/placeholder.svg"} alt="" fill sizes="(max-width: 1024px) 100vw, 50vw" className="object-cover" />
-              </div>
+              <Lightbox src={IMAGES.workshop || "/placeholder.svg"} alt="">
+                <div className="relative aspect-[4/3] overflow-hidden rounded-3xl">
+                  <Image src={IMAGES.workshop || "/placeholder.svg"} alt="" fill sizes="(max-width: 1024px) 100vw, 50vw" className="object-cover" />
+                </div>
+              </Lightbox>
             </Reveal>
             <Reveal delay={0.1}>
               <div>
@@ -103,41 +105,16 @@ export default async function AboutPage({
             <h2 className="font-heading text-2xl font-bold sm:text-3xl">{a.timeline_title}</h2>
           </Reveal>
           <div className="mt-6 overflow-hidden rounded-2xl">
-            <Image
-              src="https://d1oh1gq3c6bbc1.cloudfront.net/public/media/a1c107719eb8ba63f499cdcab3f9f600c0208f86a855f817a6c668f659b3390c-157679.webp"
-              alt="Roadmap Soleva"
-              width={1200}
-              height={600}
-              className="w-full h-auto"
-            />
+            <Lightbox src="/images/timeline.webp" alt="Roadmap Soleva">
+              <Image
+                src="/images/timeline.webp"
+                alt="Roadmap Soleva"
+                width={1200}
+                height={600}
+                className="w-full h-auto"
+              />
+            </Lightbox>
           </div>
-          <ol className="mt-10 flex flex-col gap-0">
-            {milestones.map((m, i) => (
-              <Reveal key={`${m.year}-${m.title.fr}`} delay={i * 0.05}>
-                <li className="relative flex gap-6 pb-10 last:pb-0">
-                  <div className="flex flex-col items-center">
-                    <span
-                      className={`flex h-12 w-12 shrink-0 items-center justify-center rounded-full font-heading text-sm font-bold ${
-                        m.status === "done"
-                          ? "bg-secondary text-secondary-foreground"
-                          : m.status === "current"
-                            ? "bg-primary text-primary-foreground ring-4 ring-primary/20"
-                            : "border-2 border-border bg-card text-muted-foreground"
-                      }`}
-                    >
-                      {m.year}
-                    </span>
-                    {i < milestones.length - 1 && <span className="mt-1 w-px flex-1 bg-border" aria-hidden="true" />}
-                  </div>
-                  <div className="pt-1.5">
-                    <p className="text-xs font-semibold uppercase tracking-wider text-primary">{m.year}</p>
-                    <h3 className="mt-1 font-heading text-lg font-semibold">{m.title[l]}</h3>
-                    <p className="mt-2 max-w-2xl leading-relaxed text-muted-foreground">{m.description[l]}</p>
-                  </div>
-                </li>
-              </Reveal>
-            ))}
-          </ol>
         </div>
       </section>
 

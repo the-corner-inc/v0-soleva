@@ -13,6 +13,7 @@ import { Reveal } from "@/components/ui/reveal"
 import { CtaBand } from "@/components/ui/cta-band"
 import { Button } from "@/components/ui/button"
 import { TourMap } from "@/components/voyage/tour-map"
+import { Lightbox } from "@/components/ui/lightbox"
 import { MapPin } from "lucide-react"
 
 export async function generateMetadata({
@@ -59,15 +60,17 @@ export default async function VoyagePage({
         <div className="container-premium section-padding">
           <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
             <Reveal>
-              <div className="relative aspect-[4/3] overflow-hidden rounded-3xl">
-                <Image
-                  src={IMAGES.hero}
-                  alt=""
-                  fill
-                  sizes="(max-width: 1024px) 100vw, 50vw"
-                  className="object-cover"
-                />
-              </div>
+              <Lightbox src={IMAGES.hero} alt="">
+                <div className="relative aspect-[4/3] overflow-hidden rounded-3xl">
+                  <Image
+                    src={IMAGES.hero}
+                    alt=""
+                    fill
+                    sizes="(max-width: 1024px) 100vw, 50vw"
+                    className="object-cover"
+                  />
+                </div>
+              </Lightbox>
             </Reveal>
             <Reveal delay={0.1}>
               <div>

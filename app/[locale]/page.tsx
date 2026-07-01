@@ -14,6 +14,7 @@ import { withLocale } from "@/lib/navigation"
 import { PARTNER_LOGOS, IMAGES } from "@/lib/constants"
 import { partnerCategories } from "@/lib/data/partners"
 import { Camera, Aperture } from "lucide-react"
+import { Lightbox } from "@/components/ui/lightbox"
 
 export default async function HomePage({
   params,
@@ -37,15 +38,17 @@ export default async function HomePage({
         <div className="container-premium section-padding">
           <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
             <Reveal>
-              <div className="relative aspect-[4/3] overflow-hidden rounded-3xl">
-                <Image
-                  src={IMAGES.workshop}
-                  alt=""
-                  fill
-                  sizes="(max-width: 1024px) 100vw, 50vw"
-                  className="object-cover"
-                />
-              </div>
+              <Lightbox src={IMAGES.workshop} alt="">
+                <div className="relative aspect-[4/3] overflow-hidden rounded-3xl">
+                  <Image
+                    src={IMAGES.workshop}
+                    alt=""
+                    fill
+                    sizes="(max-width: 1024px) 100vw, 50vw"
+                    className="object-cover"
+                  />
+                </div>
+              </Lightbox>
             </Reveal>
             <Reveal delay={0.1}>
               <div>
