@@ -17,16 +17,18 @@ export function HabitatHero({
 }: {
   breadcrumb: ReactNode
   hero: HabitatContent["hero"]
-  image: string
+    image?: string
   supportHref: string
   discoverHref: string
 }) {
   return (
     <section className="relative isolate overflow-hidden bg-dark text-dark-foreground">
-      <div className="absolute inset-0 -z-10">
-        <Image src={image || "/placeholder.svg"} alt="" fill priority sizes="100vw" className="object-cover" />
-        <div className="absolute inset-0 bg-gradient-to-br from-dark/95 via-dark/80 to-dark/45" />
-      </div>
+      {image && (
+        <div className="absolute inset-0 -z-10">
+          <Image src={image} alt="" fill priority sizes="100vw" className="object-cover" />
+          <div className="absolute inset-0 bg-gradient-to-br from-dark/95 via-dark/80 to-dark/45" />
+        </div>
+      )}
 
       <div className="[&_a]:text-dark-foreground/70 [&_a:hover]:text-secondary [&_span]:text-dark-foreground [&_svg]:text-dark-foreground/40">
         {breadcrumb}
