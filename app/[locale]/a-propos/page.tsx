@@ -104,7 +104,7 @@ export default async function AboutPage({
           </Reveal>
           <div className="mt-6 overflow-hidden rounded-2xl">
             <Image
-              src="https://d1oh1gq3c6bbc1.cloudfront.net/public/media/a1c107719eb8ba63f499cdcab3f9f600c0208f86a855f817a6c668f659b3390c-157679.webp"
+              src="/images/timeline.webp"
               alt="Roadmap Soleva"
               width={1200}
               height={600}

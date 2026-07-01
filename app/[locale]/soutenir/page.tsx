@@ -210,7 +210,7 @@ export default async function SupportPage({
               </div>
               <div className="flex flex-col items-center justify-center rounded-3xl border border-border bg-card p-6">
                 <img
-                  src="https://d1oh1gq3c6bbc1.cloudfront.net/public/media/e659e5c6e16cb7fa809013fadb5a4b8670cf2a456e020b890259596134acc4ac-211082.webp"
+                  src="/images/qr-code.webp"
                   alt="QR Code pour don bancaire Soleva"
                   width={180}
                   height={180}
