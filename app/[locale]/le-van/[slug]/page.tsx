@@ -12,6 +12,7 @@ import { PageHero } from "@/components/layout/page-hero"
 import { Reveal } from "@/components/ui/reveal"
 import { CtaBand } from "@/components/ui/cta-band"
 import { FaqJsonLd } from "@/components/seo/json-ld"
+import { Lightbox } from "@/components/ui/lightbox"
 
 export function generateStaticParams() {
   return locales.flatMap((locale) =>
@@ -74,16 +75,18 @@ export default async function ServiceDetailPage({
         <div className="container-premium section-padding">
           <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
             <Reveal>
-              <div className="relative aspect-[4/3] overflow-hidden rounded-3xl">
-                <Image
-                  src={service.heroImage || "/placeholder.svg"}
-                  alt=""
-                  fill
-                  sizes="(max-width: 1024px) 100vw, 50vw"
-                  className="object-cover"
-                  priority
-                />
-              </div>
+              <Lightbox src={service.heroImage || "/placeholder.svg"} alt={content.title}>
+                <div className="relative aspect-[4/3] overflow-hidden rounded-3xl">
+                  <Image
+                    src={service.heroImage || "/placeholder.svg"}
+                    alt=""
+                    fill
+                    sizes="(max-width: 1024px) 100vw, 50vw"
+                    className="object-cover"
+                    priority
+                  />
+                </div>
+              </Lightbox>
             </Reveal>
             <Reveal delay={0.1}>
               <div>

@@ -11,6 +11,7 @@ import { ArrowUpRight, Check } from "lucide-react"
 import type { Metadata } from "next"
 import Image from "next/image"
 import { notFound } from "next/navigation"
+import { Lightbox } from "@/components/ui/lightbox"
 
 const SUPPORT_URL = KEY_FIGURES.crowdfundingUrl
 const DISCOVER_URL = SITE_URL
@@ -68,7 +69,6 @@ export default async function HabitatPage({
           />
         }
         hero={c.hero}
-        image={IMAGES.habitatHero}
         supportHref={SUPPORT_URL}
         discoverHref={DISCOVER_URL}
       />
@@ -97,6 +97,17 @@ export default async function HabitatPage({
               )
             })}
           </div>
+          <Lightbox src={IMAGES.habitatHero} alt="">
+            <div className="relative mt-12 aspect-[16/9] overflow-hidden rounded-3xl lg:aspect-[21/9]">
+              <Image
+                src={IMAGES.habitatHero}
+                alt=""
+                fill
+                sizes="100vw"
+                className="object-cover"
+              />
+            </div>
+          </Lightbox>
         </div>
       </section>
 
@@ -106,15 +117,17 @@ export default async function HabitatPage({
           <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
             <Reveal>
               <figure className="m-0">
-                <div className="relative aspect-[4/3] overflow-hidden rounded-3xl">
-                  <Image
-                    src={IMAGES.habitatFeatures}
-                    alt={c.sustainability.imageCaption}
-                    fill
-                    sizes="(max-width: 1024px) 100vw, 50vw "
-                    className="object-cover"
-                  />
-                </div>
+                <Lightbox src={IMAGES.habitatFeatures} alt={c.sustainability.imageCaption}>
+                  <div className="relative aspect-[4/3] overflow-hidden rounded-3xl">
+                    <Image
+                      src={IMAGES.habitatFeatures}
+                      alt={c.sustainability.imageCaption}
+                      fill
+                      sizes="(max-width: 1024px) 100vw, 50vw"
+                      className="object-cover"
+                    />
+                  </div>
+                </Lightbox>
                 <figcaption className="mt-3 text-sm text-dark-foreground/60">{c.sustainability.imageCaption}</figcaption>
               </figure>
             </Reveal>
@@ -174,15 +187,17 @@ export default async function HabitatPage({
               </div>
             </Reveal>
             <Reveal delay={0.1}>
-              <div className="relative aspect-[3/4] overflow-hidden rounded-3xl lg:aspect-[4/5]">
-                <Image
-                  src={IMAGES.habitatInterior}
-                  alt=""
-                  fill
-                  sizes="(max-width: 1024px) 100vw, 50vw"
-                  className="object-cover"
-                />
-              </div>
+              <Lightbox src={IMAGES.habitatInterior} alt="">
+                <div className="relative aspect-[3/4] overflow-hidden rounded-3xl lg:aspect-[4/5]">
+                  <Image
+                    src={IMAGES.habitatInterior}
+                    alt=""
+                    fill
+                    sizes="(max-width: 1024px) 100vw, 50vw"
+                    className="object-cover"
+                  />
+                </div>
+              </Lightbox>
             </Reveal>
           </div>
         </div>

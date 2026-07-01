@@ -11,6 +11,7 @@ import { SectionHeading } from "@/components/ui/section-heading"
 import { Reveal } from "@/components/ui/reveal"
 import { Button } from "@/components/ui/button"
 import { CtaBand } from "@/components/ui/cta-band"
+import { Lightbox } from "@/components/ui/lightbox"
 import { Heart, Handshake, Users, Share2, ArrowRight } from "lucide-react"
 import { CopyIbanButton } from "@/components/ui/copy-iban-button"
 import { ShareButton } from "@/components/ui/share-button"
@@ -209,13 +210,15 @@ export default async function SupportPage({
                 </dl>
               </div>
               <div className="flex flex-col items-center justify-center rounded-3xl border border-border bg-card p-6">
-                <img
-                  src="/images/qr-code.webp"
-                  alt="QR Code pour don bancaire Soleva"
-                  width={180}
-                  height={180}
-                  className="rounded-xl"
-                />
+                <Lightbox src="/images/qr-code.webp" alt="QR Code pour don bancaire Soleva">
+                  <img
+                    src="/images/qr-code.webp"
+                    alt="QR Code pour don bancaire Soleva"
+                    width={180}
+                    height={180}
+                    className="rounded-xl"
+                  />
+                </Lightbox>
                 <p className="mt-3 text-xs text-muted-foreground text-center">Scannez pour payer</p>
               </div>
             </div>

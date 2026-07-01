@@ -12,6 +12,7 @@ import { habitatContent } from "@/lib/data/habitat"
 import { PageHero } from "@/components/layout/page-hero"
 import { Reveal } from "@/components/ui/reveal"
 import { CtaBand } from "@/components/ui/cta-band"
+import { Lightbox } from "@/components/ui/lightbox"
 
 export async function generateMetadata({
   params,
@@ -60,15 +61,17 @@ export default async function VanPage({
                 <Reveal key={service.slug}>
                   <article className="grid items-center gap-8 lg:grid-cols-2 lg:gap-16">
                     <div className={reversed ? "lg:order-2" : ""}>
-                      <div className="relative aspect-[4/3] overflow-hidden rounded-3xl">
-                        <Image
-                          src={service.heroImage || "/placeholder.svg"}
-                          alt=""
-                          fill
-                          sizes="(max-width: 1024px) 100vw, 50vw"
-                          className="object-cover"
-                        />
-                      </div>
+                      <Lightbox src={service.heroImage || "/placeholder.svg"} alt={content.title}>
+                        <div className="relative aspect-[4/3] overflow-hidden rounded-3xl">
+                          <Image
+                            src={service.heroImage || "/placeholder.svg"}
+                            alt=""
+                            fill
+                            sizes="(max-width: 1024px) 100vw, 50vw"
+                            className="object-cover"
+                          />
+                        </div>
+                      </Lightbox>
                     </div>
                     <div className={reversed ? "lg:order-1" : ""}>
                       <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10 text-primary">
